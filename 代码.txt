@@ -1,0 +1,829 @@
+@LK:/vol1/1000/ipynb$ docker run -v "$(pwd)":/inaseg -u 1000:1000 --rm ipynb-inaseg python /inaseg/watcher.py --watch_interval=12800
+INFO:root:['biliWatcher loop has started on ', '2025-05-15 18:09:39']
+DEBUG:root:['extracted bvid', 'BV1J3LgzSEu8', 'from', 'https://www.bilibili.com/video/BV1J3LgzSEu8']
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.bilibili.com:443
+DEBUG:urllib3.connectionpool:https://api.bilibili.com:443 "GET /x/player/pagelist?bvid=BV1J3LgzSEu8&jsonp=jsonp HTTP/11" 200 370
+DEBUG:root:['extract API', 'https://api.bilibili.com/x/series/archives?mid=1351761831&series_id=495256&only_normal=true&sort=desc&pn=1&ps=30']
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.bilibili.com:443
+DEBUG:urllib3.connectionpool:https://api.bilibili.com:443 "GET /x/series/archives?mid=1351761831&series_id=495256&only_normal=true&sort=desc&pn=1&ps=30 HTTP/11" 200 None
+INFO:root:['calling biliupWrapper on', 'https://www.bilibili.com/video/BV13Q5DzDErL', 'at', '2025-05-15 18:09:41']
+INFO:root:inaseging https://www.bilibili.com/video/BV13Q5DzDErL at 2025-05-15 18:09:41
+2025-05-15 18:09:41  INFO biliup::uploader::credential: 更新cookie
+2025-05-15 18:09:41  INFO biliup::uploader: LoginInfo { cookie_info: Object {"cookies": Array [Object {"expires": Number(1755108581), "http_only": Number(1), "name": String("SESSDATA"), "same_site": Number(0), "secure": Number(0), "value": String("fa5f9df8%2C1762884581%2Ce1b6fb51CjA1ttLffovvCXgf6-e5GWbiICqCn-QqVGSGfPBf0vu33BgMzlHJliEMTbK7HDqSB98SVjZmOUNkYXNINVhtbWJ5a1gzUmdYVDFjZWRaNUxZZWtFbFp5V0ZLNTNOLVptR0R0dnJBaDlWZjU1ZXhJcWlsWm1qNmNDNlMwRDNsVW9LalhKSWpMY25RIIEC")}, Object {"expires": Number(1755108581), "http_only": Number(0), "name": String("bili_jct"), "same_site": Number(0), "secure": Number(0), "value": String("abe4f4bd4fe25860a33b1a15a97cf042")}, Object {"expires": Number(1755108581), "http_only": Number(0), "name": String("DedeUserID"), "same_site": Number(0), "secure": Number(0), "value": String("1535934003")}, Object {"expires": Number(1755108581), "http_only": Number(0), "name": String("DedeUserID__ckMd5"), "same_site": Number(0), "secure": Number(0), "value": String("f899905049c379d5")}, Object {"expires": Number(1755108581), "http_only": Number(0), "name": String("sid"), "same_site": Number(0), "secure": Number(0), "value": String("pl1qax5b")}, Object {"expires": Number(1755108581), "http_only": Number(1), "name": String("sec_ck"), "same_site": Number(0), "secure": Number(1), "value": String("idkbk3D7YXTaKosKj3ZxbhvZ1KcTPdNjZPt8ZCLH3DyDUeBWVK8Bj9NYi5XQ5fG2WGOMZ20v29ZnydkGZuTa7oicrgJ2FOY0vXGfAiWf95R8orPjEF_NtnzYBcNnE6QnOQqjx4KIlxfjACQkoxayCDUTheOc3fJj3Kaifhw63ACc5NY4TYwOvQ!Mss")}], "domains": Array [String(".bilibili.com"), String(".biligame.com"), String(".bilibili.cn"), String(".bilicomic.com"), String(".bilicomics.com")]}, sso: ["https://passport.bilibili.com/api/v2/sso", "https://passport.biligame.com/api/v2/sso", "https://passport.bilibili.cn/api/v2/sso"], token_info: TokenInfo { access_token: "ae08cec9aa0ef1b33f973ef0b7642f51CjA1ttLffovvCXgf6-e5GWbiICqCn-QqVGSGfPBf0vu33BgMzlHJliEMTbK7HDqSB98SVjZmOUNkYXNINVhtbWJ5a1gzUmdYVDFjZWRaNUxZZWtFbFp5V0ZLNTNOLVptR0R0dnJBaDlWZjU1ZXhJcWlsWm1qNmNDNlMwRDNsVW9LalhKSWpMY25RIIEC", expires_in: 15552000, mid: 1535934003, refresh_token: "7b45868b187ad53ce58b2ececfae2b51" }, platform: Some("BiliTV") }
+INFO:root:['yt-dlp', 'https://www.bilibili.com/video/BV13Q5DzDErL', '-o', '/tmp/[%(uploader)s] %(title)s %(upload_date)s.fdee49ea-ea67-4fac-bc62-48fd537ad7d1.%(ext)s', '--cookies', 'ytdlp_cookies.txt', '--external-downloader', 'aria2c', '--external-downloader-args', '-x 16 -s 16 -k 1M']
+WARNING: External Downloader arguments given without specifying name. The arguments will be given to aria2c
+INFO:root:[BiliBili] Extracting URL: https://www.bilibili.com/video/BV13Q5DzDErL
+
+INFO:root:[BiliBili] 13Q5DzDErL: Downloading webpage
+
+INFO:root:[BiliBili] BV13Q5DzDErL: Extracting videos in anthology
+
+INFO:root:[BiliBili] 114379777378376: Extracting chapters
+
+INFO:root:[info] BV13Q5DzDErL: Downloading 1 format(s): 30080+30280
+
+INFO:root:[download] Destination: /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月22日10点场 20250422.fdee49ea-ea67-4fac-bc62-48fd537ad7d1.f30080.mp4
+
+INFO:root:[#0ecd08 24MiB/460MiB(5%) CN:16 DL:34MiB ETA:12s]
+
+INFO:root:[#0ecd08 91MiB/460MiB(19%) CN:16 DL:53MiB ETA:6s]
+
+INFO:root:[#0ecd08 150MiB/460MiB(32%) CN:16 DL:55MiB ETA:5s]
+
+INFO:root:[#0ecd08 215MiB/460MiB(46%) CN:16 DL:58MiB ETA:4s]
+
+INFO:root:[#0ecd08 276MiB/460MiB(60%) CN:16 DL:59MiB ETA:3s]
+
+INFO:root:[#0ecd08 337MiB/460MiB(73%) CN:16 DL:58MiB ETA:2s]
+
+INFO:root:[#0ecd08 403MiB/460MiB(87%) CN:16 DL:59MiB]
+
+INFO:root:[#0ecd08 455MiB/460MiB(98%) CN:9 DL:59MiB]
+
+INFO:root:
+
+INFO:root:[download] 100% of  460.61MiB in 00:00:08 at 54.01MiB/s
+
+INFO:root:[download] Destination: /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月22日10点场 20250422.fdee49ea-ea67-4fac-bc62-48fd537ad7d1.f30280.m4a
+
+INFO:root:[#4638b5 25MiB/207MiB(12%) CN:16 DL:30MiB ETA:5s]
+
+INFO:root:[#4638b5 65MiB/207MiB(31%) CN:16 DL:35MiB ETA:3s]
+
+INFO:root:[#4638b5 103MiB/207MiB(49%) CN:16 DL:36MiB ETA:2s]
+
+INFO:root:[#4638b5 141MiB/207MiB(68%) CN:16 DL:37MiB ETA:1s]
+
+INFO:root:[#4638b5 185MiB/207MiB(89%) CN:16 DL:38MiB]
+
+INFO:root:[#4638b5 207MiB/207MiB(99%) CN:1 DL:35MiB]
+
+INFO:root:
+
+INFO:root:[download] 100% of  207.83MiB in 00:00:06 at 33.65MiB/s
+
+INFO:root:[Merger] Merging formats into "/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月22日10点场 20250422.fdee49ea-ea67-4fac-bc62-48fd537ad7d1.mp4"
+
+INFO:root:Deleting original file /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月22日10点场 20250422.fdee49ea-ea67-4fac-bc62-48fd537ad7d1.f30080.mp4 (pass -k to keep)
+
+INFO:root:Deleting original file /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月22日10点场 20250422.fdee49ea-ea67-4fac-bc62-48fd537ad7d1.f30280.m4a (pass -k to keep)
+
+INFO:root:['mathcing', '/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月22日10点场 20250422.fdee49ea-ea67-4fac-bc62-48fd537ad7d1.mp4']
+INFO:root:['calling', ['python', 'inaseg.py', '--media=/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月22日10点场 20250422..mp4', '--outdir=/inaseg', '--soundonly', '', '--shazam', '--cleanup'], 'in terminal:']
+ERROR:root:/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月22日10点场 20250422..mp4 failed. file is removed in                     automatic error ignore handler
+INFO:root:['calling biliupWrapper on', 'https://www.bilibili.com/video/BV1cLLxzAEfL', 'at', '2025-05-15 18:10:03']
+INFO:root:inaseging https://www.bilibili.com/video/BV1cLLxzAEfL at 2025-05-15 18:10:03
+2025-05-15 18:10:03  INFO biliup::uploader::credential: 更新cookie
+2025-05-15 18:10:03  INFO biliup::uploader: LoginInfo { cookie_info: Object {"cookies": Array [Object {"expires": Number(1755108603), "http_only": Number(1), "name": String("SESSDATA"), "same_site": Number(0), "secure": Number(0), "value": String("4e169be1%2C1762884603%2Cb2ef2c51CjDUNUMYr84F4WGlejl7aAmgzTWIQcCeTVyFM-qq8qavQvqYScsijo4RCT4AjqcNy2ESVkZXamxWbF92Q2JYcFRPeEFJUHEyX3JidjNxazhWUlpXRGxhWUdDbnF5SUxuSDdlOWx5R1R6alctYmw5Q01COU5DTS1rUHRyQzZtOFg1UTJ2dkJ3NVpRIIEC")}, Object {"expires": Number(1755108603), "http_only": Number(0), "name": String("bili_jct"), "same_site": Number(0), "secure": Number(0), "value": String("544bf2f01f6fb91adc40f88ab9060e52")}, Object {"expires": Number(1755108603), "http_only": Number(0), "name": String("DedeUserID"), "same_site": Number(0), "secure": Number(0), "value": String("1535934003")}, Object {"expires": Number(1755108603), "http_only": Number(0), "name": String("DedeUserID__ckMd5"), "same_site": Number(0), "secure": Number(0), "value": String("f899905049c379d5")}, Object {"expires": Number(1755108603), "http_only": Number(0), "name": String("sid"), "same_site": Number(0), "secure": Number(0), "value": String("7ilir2d3")}, Object {"expires": Number(1755108603), "http_only": Number(1), "name": String("sec_ck"), "same_site": Number(0), "secure": Number(1), "value": String("bYkpJIwcpN5t1QLyoDPogCThK8xi0HHYTEMsUNm__gM3b38qVkT3ve_mzpeIbTkPYyLlerFPwe0IubGJXWmwKR1XWehSbLyXxoJlL-yY38fMU-GMK9YxRgRcLWBntIc4X7_tfJLWFrtQR6F8b8DfGL9BrCjxfW4_GDH9ESm16RynhdqP8IxGKw!Mss")}], "domains": Array [String(".bilibili.com"), String(".biligame.com"), String(".bilibili.cn"), String(".bilicomic.com"), String(".bilicomics.com")]}, sso: ["https://passport.bilibili.com/api/v2/sso", "https://passport.biligame.com/api/v2/sso", "https://passport.bilibili.cn/api/v2/sso"], token_info: TokenInfo { access_token: "0f3a92a855d987ebe4b5e19d29123a51CjDUNUMYr84F4WGlejl7aAmgzTWIQcCeTVyFM-qq8qavQvqYScsijo4RCT4AjqcNy2ESVkZXamxWbF92Q2JYcFRPeEFJUHEyX3JidjNxazhWUlpXRGxhWUdDbnF5SUxuSDdlOWx5R1R6alctYmw5Q01COU5DTS1rUHRyQzZtOFg1UTJ2dkJ3NVpRIIEC", expires_in: 15552000, mid: 1535934003, refresh_token: "b95eba2204f67cea22cdc764d40edb51" }, platform: Some("BiliTV") }
+INFO:root:['yt-dlp', 'https://www.bilibili.com/video/BV1cLLxzAEfL', '-o', '/tmp/[%(uploader)s] %(title)s %(upload_date)s.15ed951c-3bb6-4f25-9d92-0900cbe57364.%(ext)s', '--cookies', 'ytdlp_cookies.txt', '--external-downloader', 'aria2c', '--external-downloader-args', '-x 16 -s 16 -k 1M']
+WARNING: External Downloader arguments given without specifying name. The arguments will be given to aria2c
+INFO:root:[BiliBili] Extracting URL: https://www.bilibili.com/video/BV1cLLxzAEfL
+
+INFO:root:[BiliBili] 1cLLxzAEfL: Downloading webpage
+
+INFO:root:[BiliBili] BV1cLLxzAEfL: Extracting videos in anthology
+
+INFO:root:[BiliBili] 114385448078142: Extracting chapters
+
+INFO:root:[info] BV1cLLxzAEfL: Downloading 1 format(s): 30080+30280
+
+INFO:root:[download] Destination: /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月23日10点场 20250423.15ed951c-3bb6-4f25-9d92-0900cbe57364.f30080.mp4
+
+INFO:root:[#8add11 35MiB/472MiB(7%) CN:16 DL:46MiB ETA:9s]
+
+INFO:root:[#8add11 91MiB/472MiB(19%) CN:16 DL:52MiB ETA:7s]
+
+INFO:root:[#8add11 150MiB/472MiB(31%) CN:16 DL:55MiB ETA:5s]
+
+INFO:root:[#8add11 202MiB/472MiB(42%) CN:16 DL:54MiB ETA:4s]
+
+INFO:root:[#8add11 254MiB/472MiB(53%) CN:16 DL:53MiB ETA:4s]
+
+INFO:root:[#8add11 308MiB/472MiB(65%) CN:16 DL:54MiB ETA:3s]
+
+INFO:root:[#8add11 360MiB/472MiB(76%) CN:16 DL:53MiB ETA:2s]
+
+INFO:root:[#8add11 413MiB/472MiB(87%) CN:16 DL:53MiB ETA:1s]
+
+INFO:root:[#8add11 469MiB/472MiB(99%) CN:6 DL:54MiB]
+
+INFO:root:
+
+INFO:root:[download] 100% of  472.29MiB in 00:00:09 at 51.56MiB/s
+
+INFO:root:[download] Destination: /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月23日10点场 20250423.15ed951c-3bb6-4f25-9d92-0900cbe57364.f30280.m4a
+
+INFO:root:[#11c092 39MiB/216MiB(18%) CN:16 DL:48MiB ETA:3s]
+
+INFO:root:[#11c092 98MiB/216MiB(45%) CN:16 DL:54MiB ETA:2s]
+
+INFO:root:[#11c092 153MiB/216MiB(70%) CN:16 DL:55MiB ETA:1s]
+
+INFO:root:[#11c092 208MiB/216MiB(96%) CN:16 DL:55MiB]
+
+INFO:root:
+
+INFO:root:[download] 100% of  216.47MiB in 00:00:04 at 50.41MiB/s
+
+INFO:root:[Merger] Merging formats into "/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月23日10点场 20250423.15ed951c-3bb6-4f25-9d92-0900cbe57364.mp4"
+
+INFO:root:Deleting original file /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月23日10点场 20250423.15ed951c-3bb6-4f25-9d92-0900cbe57364.f30280.m4a (pass -k to keep)
+
+INFO:root:Deleting original file /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月23日10点场 20250423.15ed951c-3bb6-4f25-9d92-0900cbe57364.f30080.mp4 (pass -k to keep)
+
+INFO:root:['mathcing', '/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月23日10点场 20250423.15ed951c-3bb6-4f25-9d92-0900cbe57364.mp4']
+INFO:root:['calling', ['python', 'inaseg.py', '--media=/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月23日10点场 20250423..mp4', '--outdir=/inaseg', '--soundonly', '', '--shazam', '--cleanup'], 'in terminal:']
+ERROR:root:/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月23日10点场 20250423..mp4 failed. file is removed in                     automatic error ignore handler
+INFO:root:['calling biliupWrapper on', 'https://www.bilibili.com/video/BV1i4LqzWEK3', 'at', '2025-05-15 18:10:24']
+INFO:root:inaseging https://www.bilibili.com/video/BV1i4LqzWEK3 at 2025-05-15 18:10:24
+2025-05-15 18:10:24  INFO biliup::uploader::credential: 更新cookie
+2025-05-15 18:10:24  INFO biliup::uploader: LoginInfo { cookie_info: Object {"cookies": Array [Object {"expires": Number(1755108624), "http_only": Number(1), "name": String("SESSDATA"), "same_site": Number(0), "secure": Number(0), "value": String("c6cdb0a6%2C1762884624%2Cdc045352CjBw24VAMmoHSggtGF10UPWvJk2Kh2Ctnute_ne29ufvQc6G2_klCoPFjTiHxJjsHjISVlNWRnphNzkzTGotSmJrLWFMVDZxTFdzXzh2Q1VSbE83ZWhkOWtoYVQzWXN2YTV4b0h4VEJ1OWhGbDY4RVJnWFkxWmNwX1BVOEp0MFdEdjY0S1ZWcWd3IIEC")}, Object {"expires": Number(1755108624), "http_only": Number(0), "name": String("bili_jct"), "same_site": Number(0), "secure": Number(0), "value": String("7dddcf0f7c3d432969c1113a4ae3849c")}, Object {"expires": Number(1755108624), "http_only": Number(0), "name": String("DedeUserID"), "same_site": Number(0), "secure": Number(0), "value": String("1535934003")}, Object {"expires": Number(1755108624), "http_only": Number(0), "name": String("DedeUserID__ckMd5"), "same_site": Number(0), "secure": Number(0), "value": String("f899905049c379d5")}, Object {"expires": Number(1755108624), "http_only": Number(0), "name": String("sid"), "same_site": Number(0), "secure": Number(0), "value": String("mj59lfiz")}, Object {"expires": Number(1755108624), "http_only": Number(1), "name": String("sec_ck"), "same_site": Number(0), "secure": Number(1), "value": String("0MUwFfmPwhKVZYEg8ZrN994LcovdAd3nmxMeX6ykIoro12bVGgCPHzeIvjIV-ZIeFQaiirpADb_SSb5eMyZoMS9p9msNbJdrzXN9Rr9IpsELWjKkgrk-aHPxEMLMgGqL4TcqKF57w10C9yhPNoEmxlI31rwNorS3MYxR9e93-m7TorFsJFcVXQ!Mss")}], "domains": Array [String(".bilibili.com"), String(".biligame.com"), String(".bilibili.cn"), String(".bilicomic.com"), String(".bilicomics.com")]}, sso: ["https://passport.bilibili.com/api/v2/sso", "https://passport.biligame.com/api/v2/sso", "https://passport.bilibili.cn/api/v2/sso"], token_info: TokenInfo { access_token: "c3e3910ac2558259a99d2b5d9af36352CjBw24VAMmoHSggtGF10UPWvJk2Kh2Ctnute_ne29ufvQc6G2_klCoPFjTiHxJjsHjISVlNWRnphNzkzTGotSmJrLWFMVDZxTFdzXzh2Q1VSbE83ZWhkOWtoYVQzWXN2YTV4b0h4VEJ1OWhGbDY4RVJnWFkxWmNwX1BVOEp0MFdEdjY0S1ZWcWd3IIEC", expires_in: 15552000, mid: 1535934003, refresh_token: "597433e1f205f04f3ee7b8856ac57952" }, platform: Some("BiliTV") }
+INFO:root:['yt-dlp', 'https://www.bilibili.com/video/BV1i4LqzWEK3', '-o', '/tmp/[%(uploader)s] %(title)s %(upload_date)s.752b14e8-fae8-4ec9-9b1e-a1323e0debea.%(ext)s', '--cookies', 'ytdlp_cookies.txt', '--external-downloader', 'aria2c', '--external-downloader-args', '-x 16 -s 16 -k 1M']
+WARNING: External Downloader arguments given without specifying name. The arguments will be given to aria2c
+INFO:root:[BiliBili] Extracting URL: https://www.bilibili.com/video/BV1i4LqzWEK3
+
+INFO:root:[BiliBili] 1i4LqzWEK3: Downloading webpage
+
+INFO:root:[BiliBili] BV1i4LqzWEK3: Extracting videos in anthology
+
+INFO:root:[BiliBili] 114391320104720: Extracting chapters
+
+INFO:root:[info] BV1i4LqzWEK3: Downloading 1 format(s): 30080+30280
+
+INFO:root:[download] Destination: /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月24日10点场 20250424.752b14e8-fae8-4ec9-9b1e-a1323e0debea.f30080.mp4
+
+INFO:root:[#5a202a 34MiB/446MiB(7%) CN:16 DL:46MiB ETA:8s]
+
+INFO:root:[#5a202a 96MiB/446MiB(21%) CN:16 DL:56MiB ETA:6s]
+
+INFO:root:[#5a202a 153MiB/446MiB(34%) CN:16 DL:56MiB ETA:5s]
+
+INFO:root:[#5a202a 206MiB/446MiB(46%) CN:16 DL:55MiB ETA:4s]
+
+INFO:root:[#5a202a 258MiB/446MiB(58%) CN:16 DL:55MiB ETA:3s]
+
+INFO:root:[#5a202a 311MiB/446MiB(69%) CN:16 DL:54MiB ETA:2s]
+
+INFO:root:[#5a202a 366MiB/446MiB(82%) CN:16 DL:54MiB ETA:1s]
+
+INFO:root:[#5a202a 422MiB/446MiB(94%) CN:16 DL:55MiB]
+
+INFO:root:
+
+INFO:root:[download] 100% of  446.01MiB in 00:00:08 at 52.41MiB/s
+
+INFO:root:[download] Destination: /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月24日10点场 20250424.752b14e8-fae8-4ec9-9b1e-a1323e0debea.f30280.m4a
+
+INFO:root:[#15aec6 39MiB/216MiB(18%) CN:16 DL:49MiB ETA:3s]
+
+INFO:root:[#15aec6 91MiB/216MiB(42%) CN:16 DL:51MiB ETA:2s]
+
+INFO:root:[#15aec6 145MiB/216MiB(67%) CN:16 DL:52MiB ETA:1s]
+
+INFO:root:[#15aec6 201MiB/216MiB(93%) CN:16 DL:53MiB]
+
+INFO:root:[Merger] Merging formats into "/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月24日10点场 20250424.752b14e8-fae8-4ec9-9b1e-a1323e0debea.mp4"
+
+INFO:root:Deleting original file /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月24日10点场 20250424.752b14e8-fae8-4ec9-9b1e-a1323e0debea.f30280.m4a (pass -k to keep)
+
+INFO:root:Deleting original file /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月24日10点场 20250424.752b14e8-fae8-4ec9-9b1e-a1323e0debea.f30080.mp4 (pass -k to keep)
+
+INFO:root:['mathcing', '/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月24日10点场 20250424.752b14e8-fae8-4ec9-9b1e-a1323e0debea.mp4']
+INFO:root:['calling', ['python', 'inaseg.py', '--media=/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月24日10点场 20250424..mp4', '--outdir=/inaseg', '--soundonly', '', '--shazam', '--cleanup'], 'in terminal:']
+ERROR:root:/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月24日10点场 20250424..mp4 failed. file is removed in                     automatic error ignore handler
+INFO:root:['calling biliupWrapper on', 'https://www.bilibili.com/video/BV1GkLXzbE48', 'at', '2025-05-15 18:10:45']
+INFO:root:inaseging https://www.bilibili.com/video/BV1GkLXzbE48 at 2025-05-15 18:10:45
+2025-05-15 18:10:46  INFO biliup::uploader::credential: 更新cookie
+2025-05-15 18:10:46  INFO biliup::uploader: LoginInfo { cookie_info: Object {"cookies": Array [Object {"expires": Number(1755108646), "http_only": Number(1), "name": String("SESSDATA"), "same_site": Number(0), "secure": Number(0), "value": String("aa73cff8%2C1762884646%2Ca6601d52CjCpUCdM1b6lpG5F5EdNBq0jIMAOZSfSBgDjo0Jx4f6pgzoJGbU_4AOBoCgezbp2aiYSVlFoamg2bF92UWRmZDZLei1tTTdtMXVnRTZrRy1sdHVYZVh0ejNSc0hJTHZ5SV9fNjJWMTh1cVFBVlVyY0tJQkM2ZDlZcUNPbnd2VzZ6TkhHVXhvTkt3IIEC")}, Object {"expires": Number(1755108646), "http_only": Number(0), "name": String("bili_jct"), "same_site": Number(0), "secure": Number(0), "value": String("d7ff80f7c16c6e6fc67dd36b78598c66")}, Object {"expires": Number(1755108646), "http_only": Number(0), "name": String("DedeUserID"), "same_site": Number(0), "secure": Number(0), "value": String("1535934003")}, Object {"expires": Number(1755108646), "http_only": Number(0), "name": String("DedeUserID__ckMd5"), "same_site": Number(0), "secure": Number(0), "value": String("f899905049c379d5")}, Object {"expires": Number(1755108646), "http_only": Number(0), "name": String("sid"), "same_site": Number(0), "secure": Number(0), "value": String("n7n5js3t")}, Object {"expires": Number(1755108646), "http_only": Number(1), "name": String("sec_ck"), "same_site": Number(0), "secure": Number(1), "value": String("EzBZ9DCZFU8nTo_5eqCid7gQy5a38cKoQFFyxX46ZEGGS7I6UJTiM0fsF22mAplboWtvQlcHz2i2M7MFw1e7mhLOC7eVyd4qo1iD0aIxLjcBoDpHc9Mff6ZrVmLq6QXqbG_XxDKBFdsGKXGkzicTtYY7YMtkYCjxMrvqECd4SWdrYxLNJXCxcA!Mss")}], "domains": Array [String(".bilibili.com"), String(".biligame.com"), String(".bilibili.cn"), String(".bilicomic.com"), String(".bilicomics.com")]}, sso: ["https://passport.bilibili.com/api/v2/sso", "https://passport.biligame.com/api/v2/sso", "https://passport.bilibili.cn/api/v2/sso"], token_info: TokenInfo { access_token: "859d69c45dcc9398e3156b72890e7452CjCpUCdM1b6lpG5F5EdNBq0jIMAOZSfSBgDjo0Jx4f6pgzoJGbU_4AOBoCgezbp2aiYSVlFoamg2bF92UWRmZDZLei1tTTdtMXVnRTZrRy1sdHVYZVh0ejNSc0hJTHZ5SV9fNjJWMTh1cVFBVlVyY0tJQkM2ZDlZcUNPbnd2VzZ6TkhHVXhvTkt3IIEC", expires_in: 15552000, mid: 1535934003, refresh_token: "935f39d5201c1d9ba5c254120813b252" }, platform: Some("BiliTV") }
+INFO:root:['yt-dlp', 'https://www.bilibili.com/video/BV1GkLXzbE48', '-o', '/tmp/[%(uploader)s] %(title)s %(upload_date)s.0d005c71-47fd-409d-b7cf-6ee37fd69eff.%(ext)s', '--cookies', 'ytdlp_cookies.txt', '--external-downloader', 'aria2c', '--external-downloader-args', '-x 16 -s 16 -k 1M']
+WARNING: External Downloader arguments given without specifying name. The arguments will be given to aria2c
+INFO:root:[BiliBili] Extracting URL: https://www.bilibili.com/video/BV1GkLXzbE48
+
+INFO:root:[BiliBili] 1GkLXzbE48: Downloading webpage
+
+INFO:root:[BiliBili] BV1GkLXzbE48: Extracting videos in anthology
+
+INFO:root:[BiliBili] 114402443397530: Extracting chapters
+
+INFO:root:[info] BV1GkLXzbE48: Downloading 1 format(s): 30080+30280
+
+INFO:root:[download] Destination: /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月26日10点场 20250426.0d005c71-47fd-409d-b7cf-6ee37fd69eff.f30080.mp4
+
+INFO:root:[#343a29 41MiB/483MiB(8%) CN:16 DL:52MiB ETA:8s]
+
+INFO:root:[#343a29 102MiB/483MiB(21%) CN:16 DL:57MiB ETA:6s]
+
+INFO:root:[#343a29 162MiB/483MiB(33%) CN:16 DL:58MiB ETA:5s]
+
+INFO:root:[#343a29 220MiB/483MiB(45%) CN:16 DL:58MiB ETA:4s]
+
+INFO:root:[#343a29 277MiB/483MiB(57%) CN:16 DL:58MiB ETA:3s]
+
+INFO:root:[#343a29 335MiB/483MiB(69%) CN:16 DL:58MiB ETA:2s]
+
+INFO:root:[#343a29 391MiB/483MiB(80%) CN:16 DL:58MiB ETA:1s]
+
+INFO:root:[#343a29 454MiB/483MiB(94%) CN:16 DL:58MiB]
+
+INFO:root:
+
+INFO:root:[download] 100% of  483.87MiB in 00:00:08 at 55.48MiB/s
+
+INFO:root:[download] Destination: /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月26日10点场 20250426.0d005c71-47fd-409d-b7cf-6ee37fd69eff.f30280.m4a
+
+INFO:root:[#39f213 31MiB/218MiB(14%) CN:16 DL:43MiB ETA:4s]
+
+INFO:root:[#39f213 91MiB/218MiB(41%) CN:16 DL:53MiB ETA:2s]
+
+INFO:root:[#39f213 159MiB/218MiB(73%) CN:16 DL:59MiB]
+
+INFO:root:[#39f213 216MiB/218MiB(99%) CN:5 DL:58MiB]
+
+INFO:root:
+
+INFO:root:[download] 100% of  218.12MiB in 00:00:04 at 51.05MiB/s
+
+INFO:root:[Merger] Merging formats into "/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月26日10点场 20250426.0d005c71-47fd-409d-b7cf-6ee37fd69eff.mp4"
+
+INFO:root:Deleting original file /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月26日10点场 20250426.0d005c71-47fd-409d-b7cf-6ee37fd69eff.f30280.m4a (pass -k to keep)
+
+INFO:root:Deleting original file /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月26日10点场 20250426.0d005c71-47fd-409d-b7cf-6ee37fd69eff.f30080.mp4 (pass -k to keep)
+
+INFO:root:['mathcing', '/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月26日10点场 20250426.0d005c71-47fd-409d-b7cf-6ee37fd69eff.mp4']
+INFO:root:['calling', ['python', 'inaseg.py', '--media=/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月26日10点场 20250426..mp4', '--outdir=/inaseg', '--soundonly', '', '--shazam', '--cleanup'], 'in terminal:']
+ERROR:root:/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月26日10点场 20250426..mp4 failed. file is removed in                     automatic error ignore handler
+INFO:root:['calling biliupWrapper on', 'https://www.bilibili.com/video/BV14bjczgEsV', 'at', '2025-05-15 18:11:07']
+INFO:root:inaseging https://www.bilibili.com/video/BV14bjczgEsV at 2025-05-15 18:11:07
+2025-05-15 18:11:07  INFO biliup::uploader::credential: 更新cookie
+2025-05-15 18:11:07  INFO biliup::uploader: LoginInfo { cookie_info: Object {"cookies": Array [Object {"expires": Number(1755108667), "http_only": Number(1), "name": String("SESSDATA"), "same_site": Number(0), "secure": Number(0), "value": String("1c7acc6b%2C1762884667%2C8a718552CjC06cLXNENsGj6YkbNuP3Vz3_J0_Ydir7ZkpdeQadtQksFNWyKaC-K8pQ62D_B8M-wSVkJ5YkZTYlZLYmxleXlpb3pKR0xIN3JIYnI3VXYzbzJxdVF5ajA0WnI0cTByYWxCT1liUDZUV1FJeW9kYmUtaWpxZl9RSktQMjdWWjJMdVk5YUJVZFpBIIEC")}, Object {"expires": Number(1755108667), "http_only": Number(0), "name": String("bili_jct"), "same_site": Number(0), "secure": Number(0), "value": String("cc605082a4dc8f0d6ffa9af8d926ebb9")}, Object {"expires": Number(1755108667), "http_only": Number(0), "name": String("DedeUserID"), "same_site": Number(0), "secure": Number(0), "value": String("1535934003")}, Object {"expires": Number(1755108667), "http_only": Number(0), "name": String("DedeUserID__ckMd5"), "same_site": Number(0), "secure": Number(0), "value": String("f899905049c379d5")}, Object {"expires": Number(1755108667), "http_only": Number(0), "name": String("sid"), "same_site": Number(0), "secure": Number(0), "value": String("529f4fji")}, Object {"expires": Number(1755108667), "http_only": Number(1), "name": String("sec_ck"), "same_site": Number(0), "secure": Number(1), "value": String("XE6hS8Q3arQ28ImlaZ-fyBYbJs1NLLMnpjgimf4RVgkipb2CVEpxQ8rYwpPOXFUsK3p8iXhGUlTxfNp4gW7pJQX_DktLBye51yQvxi_BMctwx1YlhEjAHBfAETgL-Nc7GktfUYIK3UXTCLbfA2pVi4mZ-oDCODYSvvj52u1c6izuIUr93bEmAQ!Mss")}], "domains": Array [String(".bilibili.com"), String(".biligame.com"), String(".bilibili.cn"), String(".bilicomic.com"), String(".bilicomics.com")]}, sso: ["https://passport.bilibili.com/api/v2/sso", "https://passport.biligame.com/api/v2/sso", "https://passport.bilibili.cn/api/v2/sso"], token_info: TokenInfo { access_token: "1bba924c053ce0fd7bb153dabbcc3752CjC06cLXNENsGj6YkbNuP3Vz3_J0_Ydir7ZkpdeQadtQksFNWyKaC-K8pQ62D_B8M-wSVkJ5YkZTYlZLYmxleXlpb3pKR0xIN3JIYnI3VXYzbzJxdVF5ajA0WnI0cTByYWxCT1liUDZUV1FJeW9kYmUtaWpxZl9RSktQMjdWWjJMdVk5YUJVZFpBIIEC", expires_in: 15552000, mid: 1535934003, refresh_token: "e2441d73589d774196fce93905bb0552" }, platform: Some("BiliTV") }
+INFO:root:['yt-dlp', 'https://www.bilibili.com/video/BV14bjczgEsV', '-o', '/tmp/[%(uploader)s] %(title)s %(upload_date)s.70e80dee-b4e7-48b8-ad65-daffad53f0cc.%(ext)s', '--cookies', 'ytdlp_cookies.txt', '--external-downloader', 'aria2c', '--external-downloader-args', '-x 16 -s 16 -k 1M']
+WARNING: External Downloader arguments given without specifying name. The arguments will be given to aria2c
+INFO:root:[BiliBili] Extracting URL: https://www.bilibili.com/video/BV14bjczgEsV
+
+INFO:root:[BiliBili] 14bjczgEsV: Downloading webpage
+
+INFO:root:[BiliBili] BV14bjczgEsV: Extracting videos in anthology
+
+INFO:root:[BiliBili] 114408080541134: Extracting chapters
+
+INFO:root:[info] BV14bjczgEsV: Downloading 1 format(s): 30080+30280
+
+INFO:root:[download] Destination: /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月27日10点场 20250427.70e80dee-b4e7-48b8-ad65-daffad53f0cc.f30080.mp4
+
+INFO:root:[#3907ce 38MiB/477MiB(8%) CN:16 DL:51MiB ETA:8s]
+
+INFO:root:[#3907ce 112MiB/477MiB(23%) CN:16 DL:64MiB ETA:5s]
+
+INFO:root:[#3907ce 183MiB/477MiB(38%) CN:16 DL:67MiB ETA:4s]
+
+INFO:root:[#3907ce 248MiB/477MiB(51%) CN:16 DL:66MiB ETA:3s]
+
+INFO:root:[#3907ce 308MiB/477MiB(64%) CN:16 DL:65MiB ETA:2s]
+
+INFO:root:[#3907ce 371MiB/477MiB(77%) CN:16 DL:65MiB ETA:1s]
+
+INFO:root:[#3907ce 429MiB/477MiB(89%) CN:16 DL:64MiB]
+
+INFO:root:
+
+INFO:root:[download] 100% of  477.97MiB in 00:00:07 at 60.05MiB/s
+
+INFO:root:[download] Destination: /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月27日10点场 20250427.70e80dee-b4e7-48b8-ad65-daffad53f0cc.f30280.m4a
+
+INFO:root:[#d05620 30MiB/210MiB(14%) CN:16 DL:42MiB ETA:4s]
+
+INFO:root:[#d05620 94MiB/210MiB(45%) CN:16 DL:55MiB ETA:2s]
+
+INFO:root:[#d05620 159MiB/210MiB(75%) CN:16 DL:58MiB]
+
+INFO:root:
+
+INFO:root:[download] 100% of  210.01MiB in 00:00:04 at 51.83MiB/s
+
+INFO:root:[Merger] Merging formats into "/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月27日10点场 20250427.70e80dee-b4e7-48b8-ad65-daffad53f0cc.mp4"
+
+INFO:root:Deleting original file /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月27日10点场 20250427.70e80dee-b4e7-48b8-ad65-daffad53f0cc.f30080.mp4 (pass -k to keep)
+
+INFO:root:Deleting original file /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月27日10点场 20250427.70e80dee-b4e7-48b8-ad65-daffad53f0cc.f30280.m4a (pass -k to keep)
+
+INFO:root:['mathcing', '/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月27日10点场 20250427.70e80dee-b4e7-48b8-ad65-daffad53f0cc.mp4']
+INFO:root:['calling', ['python', 'inaseg.py', '--media=/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月27日10点场 20250427..mp4', '--outdir=/inaseg', '--soundonly', '', '--shazam', '--cleanup'], 'in terminal:']
+ERROR:root:/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月27日10点场 20250427..mp4 failed. file is removed in                     automatic error ignore handler
+INFO:root:['calling biliupWrapper on', 'https://www.bilibili.com/video/BV11WL1zbEWD', 'at', '2025-05-15 18:11:30']
+INFO:root:inaseging https://www.bilibili.com/video/BV11WL1zbEWD at 2025-05-15 18:11:30
+2025-05-15 18:11:30  INFO biliup::uploader::credential: 更新cookie
+2025-05-15 18:11:30  INFO biliup::uploader: LoginInfo { cookie_info: Object {"cookies": Array [Object {"expires": Number(1755108690), "http_only": Number(1), "name": String("SESSDATA"), "same_site": Number(0), "secure": Number(0), "value": String("6f4bca6b%2C1762884690%2C00aa0852CjAO_y3VewRbiMW16rVK0e7oK57L-nCOw8_DKkE-jijy5m2O6to5T2G9AGWKitNqYFMSVmI4MTJhV2g0eHVIQlVWcHBiMklnWkxYd2o0em1ZSEVxTUxoT3ltLXpFQjNjbTdwdG1melNGaDNqZlpxYjZiaTBNMkUzbjZVVEhZcHpHcmhNa2x3Z2pRIIEC")}, Object {"expires": Number(1755108690), "http_only": Number(0), "name": String("bili_jct"), "same_site": Number(0), "secure": Number(0), "value": String("0f9ca34590a77bb36c20259704e74b47")}, Object {"expires": Number(1755108690), "http_only": Number(0), "name": String("DedeUserID"), "same_site": Number(0), "secure": Number(0), "value": String("1535934003")}, Object {"expires": Number(1755108690), "http_only": Number(0), "name": String("DedeUserID__ckMd5"), "same_site": Number(0), "secure": Number(0), "value": String("f899905049c379d5")}, Object {"expires": Number(1755108690), "http_only": Number(0), "name": String("sid"), "same_site": Number(0), "secure": Number(0), "value": String("qitbpdgt")}, Object {"expires": Number(1755108690), "http_only": Number(1), "name": String("sec_ck"), "same_site": Number(0), "secure": Number(1), "value": String("Tdp77ePmFvoEIpTLiEXBjV4fYpbr5-m0d6xtGrtIFr88V6BMcPHORtTsYVfapQ8RyHr8Hyad995PxwPXDmG6sgrOjseDBDIHffJiYMMf7F_dwF6uedyaKsbK9Uc8AkOtjQwEE3UN5T8deMJcl2_dwKdPwqCLTpGz1y0WeU8JBZfGeBADHqxamQ!Mss")}], "domains": Array [String(".bilibili.com"), String(".biligame.com"), String(".bilibili.cn"), String(".bilicomic.com"), String(".bilicomics.com")]}, sso: ["https://passport.bilibili.com/api/v2/sso", "https://passport.biligame.com/api/v2/sso", "https://passport.bilibili.cn/api/v2/sso"], token_info: TokenInfo { access_token: "8377b6e72e0ada34ed2617cd38aca652CjAO_y3VewRbiMW16rVK0e7oK57L-nCOw8_DKkE-jijy5m2O6to5T2G9AGWKitNqYFMSVmI4MTJhV2g0eHVIQlVWcHBiMklnWkxYd2o0em1ZSEVxTUxoT3ltLXpFQjNjbTdwdG1melNGaDNqZlpxYjZiaTBNMkUzbjZVVEhZcHpHcmhNa2x3Z2pRIIEC", expires_in: 15552000, mid: 1535934003, refresh_token: "1e8c3238e96e2879f917c173c6ac1d52" }, platform: Some("BiliTV") }
+INFO:root:['yt-dlp', 'https://www.bilibili.com/video/BV11WL1zbEWD', '-o', '/tmp/[%(uploader)s] %(title)s %(upload_date)s.a828d612-ea07-400a-973a-c6144760fb2b.%(ext)s', '--cookies', 'ytdlp_cookies.txt', '--external-downloader', 'aria2c', '--external-downloader-args', '-x 16 -s 16 -k 1M']
+WARNING: External Downloader arguments given without specifying name. The arguments will be given to aria2c
+INFO:root:[BiliBili] Extracting URL: https://www.bilibili.com/video/BV11WL1zbEWD
+
+INFO:root:[BiliBili] 11WL1zbEWD: Downloading webpage
+
+INFO:root:[BiliBili] BV11WL1zbEWD: Extracting videos in anthology
+
+INFO:root:[BiliBili] 114413751437948: Extracting chapters
+
+INFO:root:[info] BV11WL1zbEWD: Downloading 1 format(s): 30080+30280
+
+INFO:root:[download] Destination: /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月28日10点场 20250428.a828d612-ea07-400a-973a-c6144760fb2b.f30080.mp4
+
+INFO:root:[#575ec9 25MiB/465MiB(5%) CN:16 DL:34MiB ETA:12s]
+
+INFO:root:[#575ec9 93MiB/465MiB(20%) CN:16 DL:54MiB ETA:6s]
+
+INFO:root:[#575ec9 159MiB/465MiB(34%) CN:16 DL:58MiB ETA:5s]
+
+INFO:root:[#575ec9 226MiB/465MiB(48%) CN:16 DL:61MiB ETA:3s]
+
+INFO:root:[#575ec9 289MiB/465MiB(62%) CN:16 DL:61MiB ETA:2s]
+
+INFO:root:[#575ec9 359MiB/465MiB(77%) CN:16 DL:63MiB ETA:1s]
+
+INFO:root:[#575ec9 426MiB/465MiB(91%) CN:16 DL:63MiB]
+
+INFO:root:
+
+INFO:root:[download] 100% of  465.88MiB in 00:00:07 at 59.26MiB/s
+
+INFO:root:[download] Destination: /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月28日10点场 20250428.a828d612-ea07-400a-973a-c6144760fb2b.f30280.m4a
+
+INFO:root:[#2e3052 40MiB/209MiB(19%) CN:16 DL:50MiB ETA:3s]
+
+INFO:root:[#2e3052 113MiB/209MiB(54%) CN:16 DL:62MiB ETA:1s]
+
+INFO:root:[#2e3052 181MiB/209MiB(86%) CN:16 DL:64MiB]
+
+INFO:root:
+
+INFO:root:[download] 100% of  209.23MiB in 00:00:03 at 57.54MiB/s
+
+INFO:root:[Merger] Merging formats into "/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月28日10点场 20250428.a828d612-ea07-400a-973a-c6144760fb2b.mp4"
+
+INFO:root:Deleting original file /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月28日10点场 20250428.a828d612-ea07-400a-973a-c6144760fb2b.f30280.m4a (pass -k to keep)
+
+INFO:root:Deleting original file /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月28日10点场 20250428.a828d612-ea07-400a-973a-c6144760fb2b.f30080.mp4 (pass -k to keep)
+
+INFO:root:['mathcing', '/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月28日10点场 20250428.a828d612-ea07-400a-973a-c6144760fb2b.mp4']
+INFO:root:['calling', ['python', 'inaseg.py', '--media=/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月28日10点场 20250428..mp4', '--outdir=/inaseg', '--soundonly', '', '--shazam', '--cleanup'], 'in terminal:']
+ERROR:root:/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月28日10点场 20250428..mp4 failed. file is removed in                     automatic error ignore handler
+INFO:root:['calling biliupWrapper on', 'https://www.bilibili.com/video/BV1ScGXz1EH8', 'at', '2025-05-15 18:11:50']
+INFO:root:inaseging https://www.bilibili.com/video/BV1ScGXz1EH8 at 2025-05-15 18:11:50
+2025-05-15 18:11:50  INFO biliup::uploader::credential: 更新cookie
+2025-05-15 18:11:50  INFO biliup::uploader: LoginInfo { cookie_info: Object {"cookies": Array [Object {"expires": Number(1755108710), "http_only": Number(1), "name": String("SESSDATA"), "same_site": Number(0), "secure": Number(0), "value": String("8f01ee82%2C1762884710%2C93750852CjD5hx8vMU4A0kDiWHWdgOFu3ZPXS-SiIK9gzLTUtL81QawbdP-Mt8aaHmN7fjqYEIYSVklJU0k1alZZM0xxNWpiSmZGcFljT1didFZoTnZPUVpRaHJqdjNGbGpWcWNGVWkzeHNrcFdxWHh0aUlYUFZpUnJMM19tenQ4U1dIMHdLOGxXYk1adVh3IIEC")}, Object {"expires": Number(1755108710), "http_only": Number(0), "name": String("bili_jct"), "same_site": Number(0), "secure": Number(0), "value": String("038cb80ef7d1680c212f2e9e22a721e4")}, Object {"expires": Number(1755108710), "http_only": Number(0), "name": String("DedeUserID"), "same_site": Number(0), "secure": Number(0), "value": String("1535934003")}, Object {"expires": Number(1755108710), "http_only": Number(0), "name": String("DedeUserID__ckMd5"), "same_site": Number(0), "secure": Number(0), "value": String("f899905049c379d5")}, Object {"expires": Number(1755108710), "http_only": Number(0), "name": String("sid"), "same_site": Number(0), "secure": Number(0), "value": String("qfdzvop8")}, Object {"expires": Number(1755108710), "http_only": Number(1), "name": String("sec_ck"), "same_site": Number(0), "secure": Number(1), "value": String("l3fpfUQLYGlHCVEMHtjBPFMfmac05eGO37OEaUa07RdV_Yv-uzPFYsbLRVfA9-wzBkvM9KX9N8wtuZ5qUsLhjpma2FOkUoYhehxts1lBQRleHgVbL58WMWF1Q1iivWFRKGGYgaDfD9VR6e5l4Fykim6B26wSWTlVkTzhxMM48_Km8Ky3tnr_cw!Mss")}], "domains": Array [String(".bilibili.com"), String(".biligame.com"), String(".bilibili.cn"), String(".bilicomic.com"), String(".bilicomics.com")]}, sso: ["https://passport.bilibili.com/api/v2/sso", "https://passport.biligame.com/api/v2/sso", "https://passport.bilibili.cn/api/v2/sso"], token_info: TokenInfo { access_token: "b0a59158bd6b5cfc2119c65cbda56352CjD5hx8vMU4A0kDiWHWdgOFu3ZPXS-SiIK9gzLTUtL81QawbdP-Mt8aaHmN7fjqYEIYSVklJU0k1alZZM0xxNWpiSmZGcFljT1didFZoTnZPUVpRaHJqdjNGbGpWcWNGVWkzeHNrcFdxWHh0aUlYUFZpUnJMM19tenQ4U1dIMHdLOGxXYk1adVh3IIEC", expires_in: 15552000, mid: 1535934003, refresh_token: "c681e4bfdbab3ca0d5ffe964d22f8e52" }, platform: Some("BiliTV") }
+INFO:root:['yt-dlp', 'https://www.bilibili.com/video/BV1ScGXz1EH8', '-o', '/tmp/[%(uploader)s] %(title)s %(upload_date)s.ffb5de11-4c0d-44c6-902e-25898d954264.%(ext)s', '--cookies', 'ytdlp_cookies.txt', '--external-downloader', 'aria2c', '--external-downloader-args', '-x 16 -s 16 -k 1M']
+WARNING: External Downloader arguments given without specifying name. The arguments will be given to aria2c
+INFO:root:[BiliBili] Extracting URL: https://www.bilibili.com/video/BV1ScGXz1EH8
+
+INFO:root:[BiliBili] 1ScGXz1EH8: Downloading webpage
+
+INFO:root:[BiliBili] BV1ScGXz1EH8: Extracting videos in anthology
+
+INFO:root:[BiliBili] 114425092640436: Extracting chapters
+
+INFO:root:[info] BV1ScGXz1EH8: Downloading 1 format(s): 30080+30280
+
+INFO:root:[download] Destination: /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月30日10点场 20250430.ffb5de11-4c0d-44c6-902e-25898d954264.f30080.mp4
+
+INFO:root:[#50b1ab 47MiB/466MiB(10%) CN:16 DL:55MiB ETA:7s]
+
+INFO:root:[#50b1ab 114MiB/466MiB(24%) CN:16 DL:61MiB ETA:5s]
+
+INFO:root:[#50b1ab 176MiB/466MiB(37%) CN:16 DL:61MiB ETA:4s]
+
+INFO:root:[#50b1ab 235MiB/466MiB(50%) CN:16 DL:61MiB ETA:3s]
+
+INFO:root:[#50b1ab 295MiB/466MiB(63%) CN:16 DL:61MiB ETA:2s]
+
+INFO:root:[#50b1ab 355MiB/466MiB(76%) CN:16 DL:61MiB ETA:1s]
+
+INFO:root:[#50b1ab 417MiB/466MiB(89%) CN:16 DL:61MiB]
+
+INFO:root:
+
+INFO:root:[download] 100% of  466.50MiB in 00:00:08 at 57.79MiB/s
+
+INFO:root:[download] Destination: /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月30日10点场 20250430.ffb5de11-4c0d-44c6-902e-25898d954264.f30280.m4a
+
+INFO:root:[#010d7f 30MiB/208MiB(14%) CN:16 DL:39MiB ETA:4s]
+
+INFO:root:[#010d7f 95MiB/208MiB(45%) CN:16 DL:54MiB ETA:2s]
+
+INFO:root:[#010d7f 163MiB/208MiB(78%) CN:16 DL:59MiB]
+
+INFO:root:
+
+INFO:root:[download] 100% of  208.87MiB in 00:00:04 at 50.46MiB/s
+
+INFO:root:[Merger] Merging formats into "/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月30日10点场 20250430.ffb5de11-4c0d-44c6-902e-25898d954264.mp4"
+
+INFO:root:Deleting original file /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月30日10点场 20250430.ffb5de11-4c0d-44c6-902e-25898d954264.f30280.m4a (pass -k to keep)
+
+INFO:root:Deleting original file /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月30日10点场 20250430.ffb5de11-4c0d-44c6-902e-25898d954264.f30080.mp4 (pass -k to keep)
+
+INFO:root:['mathcing', '/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月30日10点场 20250430.ffb5de11-4c0d-44c6-902e-25898d954264.mp4']
+INFO:root:['calling', ['python', 'inaseg.py', '--media=/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月30日10点场 20250430..mp4', '--outdir=/inaseg', '--soundonly', '', '--shazam', '--cleanup'], 'in terminal:']
+ERROR:root:/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年04月30日10点场 20250430..mp4 failed. file is removed in                     automatic error ignore handler
+INFO:root:['calling biliupWrapper on', 'https://www.bilibili.com/video/BV1nAVtzwEaJ', 'at', '2025-05-15 18:12:11']
+INFO:root:inaseging https://www.bilibili.com/video/BV1nAVtzwEaJ at 2025-05-15 18:12:11
+2025-05-15 18:12:11  INFO biliup::uploader::credential: 更新cookie
+2025-05-15 18:12:11  INFO biliup::uploader: LoginInfo { cookie_info: Object {"cookies": Array [Object {"expires": Number(1755108731), "http_only": Number(1), "name": String("SESSDATA"), "same_site": Number(0), "secure": Number(0), "value": String("c7ad21e3%2C1762884731%2C69123c51CjC70J5TqW1g9Jw0YUcaUpIoFBEyYeer6EEnnuaoxAT4xt0wFIPifiybenuToEvxs3QSVlpVYXRKY2lrajhJY1BDLW5pdFlRb1ZzdkJUeGZXdWhVb1RNdFlESk1Ba2dBb3FFTTRtSzJSNll6ZkJ6c1p1NnlINjZpWlRidUpzZXNERXpjSnRmUmhnIIEC")}, Object {"expires": Number(1755108731), "http_only": Number(0), "name": String("bili_jct"), "same_site": Number(0), "secure": Number(0), "value": String("a72ccf3b0d9d276ef571fd2ae7ba2c14")}, Object {"expires": Number(1755108731), "http_only": Number(0), "name": String("DedeUserID"), "same_site": Number(0), "secure": Number(0), "value": String("1535934003")}, Object {"expires": Number(1755108731), "http_only": Number(0), "name": String("DedeUserID__ckMd5"), "same_site": Number(0), "secure": Number(0), "value": String("f899905049c379d5")}, Object {"expires": Number(1755108731), "http_only": Number(0), "name": String("sid"), "same_site": Number(0), "secure": Number(0), "value": String("8lenc9j9")}, Object {"expires": Number(1755108731), "http_only": Number(1), "name": String("sec_ck"), "same_site": Number(0), "secure": Number(1), "value": String("gOJMBUwdlPEuQ3Pjv64EGSQwc7Ma3ZbQIuAOotL7bh0rG_3f47n5PmuhS1-1Z00f7wSZG07zeVFvhXrpavBbld954eKaz2ETsMTut9TKoxja6ML760Z8e1N0dkr7R0ZjePma11ThEeK4YIIjrwhuymzTdBtlSpmpMAgjQaBpzAsZxQ14_Hwz-Q!Mss")}], "domains": Array [String(".bilibili.com"), String(".biligame.com"), String(".bilibili.cn"), String(".bilicomic.com"), String(".bilicomics.com")]}, sso: ["https://passport.bilibili.com/api/v2/sso", "https://passport.biligame.com/api/v2/sso", "https://passport.bilibili.cn/api/v2/sso"], token_info: TokenInfo { access_token: "07db2d2ee94436b73edf576e24020751CjC70J5TqW1g9Jw0YUcaUpIoFBEyYeer6EEnnuaoxAT4xt0wFIPifiybenuToEvxs3QSVlpVYXRKY2lrajhJY1BDLW5pdFlRb1ZzdkJUeGZXdWhVb1RNdFlESk1Ba2dBb3FFTTRtSzJSNll6ZkJ6c1p1NnlINjZpWlRidUpzZXNERXpjSnRmUmhnIIEC", expires_in: 15552000, mid: 1535934003, refresh_token: "5a788125e56fa6f8a935bb09d1b45c51" }, platform: Some("BiliTV") }
+INFO:root:['yt-dlp', 'https://www.bilibili.com/video/BV1nAVtzwEaJ', '-o', '/tmp/[%(uploader)s] %(title)s %(upload_date)s.ac92be34-6ddf-4ca1-9d18-24aa80feb500.%(ext)s', '--cookies', 'ytdlp_cookies.txt', '--external-downloader', 'aria2c', '--external-downloader-args', '-x 16 -s 16 -k 1M']
+WARNING: External Downloader arguments given without specifying name. The arguments will be given to aria2c
+INFO:root:[BiliBili] Extracting URL: https://www.bilibili.com/video/BV1nAVtzwEaJ
+
+INFO:root:[BiliBili] 1nAVtzwEaJ: Downloading webpage
+
+INFO:root:[BiliBili] BV1nAVtzwEaJ: Extracting videos in anthology
+
+INFO:root:[BiliBili] 114464703647570: Extracting chapters
+
+INFO:root:[info] BV1nAVtzwEaJ: Downloading 1 format(s): 30080+30280
+
+INFO:root:[download] Destination: /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月07日10点场 20250507.ac92be34-6ddf-4ca1-9d18-24aa80feb500.f30080.mp4
+
+INFO:root:[#26ec9d 20MiB/400MiB(5%) CN:16 DL:29MiB ETA:12s]
+
+INFO:root:[#26ec9d 55MiB/400MiB(13%) CN:16 DL:33MiB ETA:10s]
+
+INFO:root:[#26ec9d 96MiB/400MiB(24%) CN:16 DL:36MiB ETA:8s]
+
+INFO:root:[#26ec9d 140MiB/400MiB(34%) CN:16 DL:38MiB ETA:6s]
+
+INFO:root:[#26ec9d 180MiB/400MiB(45%) CN:16 DL:38MiB ETA:5s]
+
+INFO:root:[#26ec9d 219MiB/400MiB(54%) CN:16 DL:38MiB ETA:4s]
+
+INFO:root:[#26ec9d 254MiB/400MiB(63%) CN:16 DL:38MiB ETA:3s]
+
+INFO:root:[#26ec9d 301MiB/400MiB(75%) CN:16 DL:39MiB ETA:2s]
+
+INFO:root:[#26ec9d 338MiB/400MiB(84%) CN:16 DL:39MiB ETA:1s]
+
+INFO:root:[#26ec9d 384MiB/400MiB(95%) CN:16 DL:39MiB]
+
+INFO:root:
+
+INFO:root:[download] 100% of  400.58MiB in 00:00:11 at 36.34MiB/s
+
+INFO:root:[download] Destination: /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月07日10点场 20250507.ac92be34-6ddf-4ca1-9d18-24aa80feb500.f30280.m4a
+
+INFO:root:[#60e2fb 40MiB/208MiB(19%) CN:16 DL:49MiB ETA:3s]
+
+INFO:root:[#60e2fb 99MiB/208MiB(47%) CN:16 DL:55MiB ETA:1s]
+
+INFO:root:[#60e2fb 155MiB/208MiB(74%) CN:16 DL:55MiB]
+
+INFO:root:[#60e2fb 207MiB/208MiB(99%) CN:1 DL:54MiB]
+
+INFO:root:
+
+INFO:root:[download] 100% of  208.14MiB in 00:00:04 at 49.91MiB/s
+
+INFO:root:[Merger] Merging formats into "/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月07日10点场 20250507.ac92be34-6ddf-4ca1-9d18-24aa80feb500.mp4"
+
+INFO:root:Deleting original file /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月07日10点场 20250507.ac92be34-6ddf-4ca1-9d18-24aa80feb500.f30280.m4a (pass -k to keep)
+
+INFO:root:Deleting original file /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月07日10点场 20250507.ac92be34-6ddf-4ca1-9d18-24aa80feb500.f30080.mp4 (pass -k to keep)
+
+INFO:root:['mathcing', '/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月07日10点场 20250507.ac92be34-6ddf-4ca1-9d18-24aa80feb500.mp4']
+INFO:root:['calling', ['python', 'inaseg.py', '--media=/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月07日10点场 20250507..mp4', '--outdir=/inaseg', '--soundonly', '', '--shazam', '--cleanup'], 'in terminal:']
+ERROR:root:/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月07日10点场 20250507..mp4 failed. file is removed in                     automatic error ignore handler
+INFO:root:['calling biliupWrapper on', 'https://www.bilibili.com/video/BV1N75AzzEox', 'at', '2025-05-15 18:12:34']
+INFO:root:inaseging https://www.bilibili.com/video/BV1N75AzzEox at 2025-05-15 18:12:34
+2025-05-15 18:12:34  INFO biliup::uploader::credential: 更新cookie
+2025-05-15 18:12:34  INFO biliup::uploader: LoginInfo { cookie_info: Object {"cookies": Array [Object {"expires": Number(1755108754), "http_only": Number(1), "name": String("SESSDATA"), "same_site": Number(0), "secure": Number(0), "value": String("f2671981%2C1762884754%2C14c18051CjAwghVhHSso3VnCqtcP3YVb7hMvbTyjMctoxyThoil9SFGRSir8cq8G15beHiComZISVllUNHg3MU1XSUNyNWZRY2h3TnR0d1ZxaGxUQTNHRFdvckxrbWNuU24xLVM1YTFGZDlrM3I0eVNnT3V2ZWEwNHo0bURwMDgyWnNxZW1zQ1VYZmMwcTlBIIEC")}, Object {"expires": Number(1755108754), "http_only": Number(0), "name": String("bili_jct"), "same_site": Number(0), "secure": Number(0), "value": String("9aab4e78556c794c2be2e16f8f3ee7ae")}, Object {"expires": Number(1755108754), "http_only": Number(0), "name": String("DedeUserID"), "same_site": Number(0), "secure": Number(0), "value": String("1535934003")}, Object {"expires": Number(1755108754), "http_only": Number(0), "name": String("DedeUserID__ckMd5"), "same_site": Number(0), "secure": Number(0), "value": String("f899905049c379d5")}, Object {"expires": Number(1755108754), "http_only": Number(0), "name": String("sid"), "same_site": Number(0), "secure": Number(0), "value": String("5gp2cljx")}, Object {"expires": Number(1755108754), "http_only": Number(1), "name": String("sec_ck"), "same_site": Number(0), "secure": Number(1), "value": String("5L917_C8r-tDEY4vpRpxQwod8DllWO5Qi5PBdLMEIwHzMpmxUdWVDyapCakHsgzuBX73xaJQWRPrxNpu89maPuJgr62HFFNDXX-tr7iMfDprwnQQZUgqdSVt7ObRc_Ak_UybiiBYSA01S-aCGxaRw_QUjNzAkXlj_bQphyQwSJFrWomePBtXBg!Mss")}], "domains": Array [String(".bilibili.com"), String(".biligame.com"), String(".bilibili.cn"), String(".bilicomic.com"), String(".bilicomics.com")]}, sso: ["https://passport.bilibili.com/api/v2/sso", "https://passport.biligame.com/api/v2/sso", "https://passport.bilibili.cn/api/v2/sso"], token_info: TokenInfo { access_token: "10e20841da6f4200937818db73166651CjAwghVhHSso3VnCqtcP3YVb7hMvbTyjMctoxyThoil9SFGRSir8cq8G15beHiComZISVllUNHg3MU1XSUNyNWZRY2h3TnR0d1ZxaGxUQTNHRFdvckxrbWNuU24xLVM1YTFGZDlrM3I0eVNnT3V2ZWEwNHo0bURwMDgyWnNxZW1zQ1VYZmMwcTlBIIEC", expires_in: 15552000, mid: 1535934003, refresh_token: "b5003e0db2f94d00b46dd7a695622f51" }, platform: Some("BiliTV") }
+INFO:root:['yt-dlp', 'https://www.bilibili.com/video/BV1N75AzzEox', '-o', '/tmp/[%(uploader)s] %(title)s %(upload_date)s.1faad964-baed-442c-b652-e8656a122c53.%(ext)s', '--cookies', 'ytdlp_cookies.txt', '--external-downloader', 'aria2c', '--external-downloader-args', '-x 16 -s 16 -k 1M']
+WARNING: External Downloader arguments given without specifying name. The arguments will be given to aria2c
+INFO:root:[BiliBili] Extracting URL: https://www.bilibili.com/video/BV1N75AzzEox
+
+INFO:root:[BiliBili] 1N75AzzEox: Downloading webpage
+
+INFO:root:[BiliBili] BV1N75AzzEox: Extracting videos in anthology
+
+INFO:root:[BiliBili] 114470407965560: Extracting chapters
+
+INFO:root:[info] BV1N75AzzEox: Downloading 1 format(s): 30080+30280
+
+INFO:root:[download] Destination: /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月08日10点场 20250508.1faad964-baed-442c-b652-e8656a122c53.f30080.mp4
+
+INFO:root:[#87a1fd 21MiB/379MiB(5%) CN:16 DL:30MiB ETA:11s]
+
+INFO:root:[#87a1fd 88MiB/379MiB(23%) CN:16 DL:51MiB ETA:5s]
+
+INFO:root:[#87a1fd 155MiB/379MiB(40%) CN:16 DL:57MiB ETA:3s]
+
+INFO:root:[#87a1fd 214MiB/379MiB(56%) CN:16 DL:58MiB ETA:2s]
+
+INFO:root:[#87a1fd 283MiB/379MiB(74%) CN:16 DL:60MiB ETA:1s]
+
+INFO:root:[#87a1fd 343MiB/379MiB(90%) CN:16 DL:60MiB]
+
+INFO:root:
+
+INFO:root:[download] 100% of  379.85MiB in 00:00:06 at 56.46MiB/s
+
+INFO:root:[download] Destination: /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月08日10点场 20250508.1faad964-baed-442c-b652-e8656a122c53.f30280.m4a
+
+INFO:root:[#11dcaf 23MiB/203MiB(11%) CN:16 DL:30MiB ETA:6s]
+
+INFO:root:[#11dcaf 93MiB/203MiB(45%) CN:16 DL:52MiB ETA:2s]
+
+INFO:root:[#11dcaf 158MiB/203MiB(77%) CN:16 DL:57MiB]
+
+INFO:root:
+
+INFO:root:[download] 100% of  203.55MiB in 00:00:04 at 50.31MiB/s
+
+INFO:root:[Merger] Merging formats into "/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月08日10点场 20250508.1faad964-baed-442c-b652-e8656a122c53.mp4"
+
+INFO:root:Deleting original file /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月08日10点场 20250508.1faad964-baed-442c-b652-e8656a122c53.f30080.mp4 (pass -k to keep)
+
+INFO:root:Deleting original file /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月08日10点场 20250508.1faad964-baed-442c-b652-e8656a122c53.f30280.m4a (pass -k to keep)
+
+INFO:root:['mathcing', '/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月08日10点场 20250508.1faad964-baed-442c-b652-e8656a122c53.mp4']
+INFO:root:['calling', ['python', 'inaseg.py', '--media=/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月08日10点场 20250508..mp4', '--outdir=/inaseg', '--soundonly', '', '--shazam', '--cleanup'], 'in terminal:']
+ERROR:root:/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月08日10点场 20250508..mp4 failed. file is removed in                     automatic error ignore handler
+INFO:root:['calling biliupWrapper on', 'https://www.bilibili.com/video/BV1Wn55zKEmj', 'at', '2025-05-15 18:12:53']
+INFO:root:inaseging https://www.bilibili.com/video/BV1Wn55zKEmj at 2025-05-15 18:12:53
+2025-05-15 18:12:53  INFO biliup::uploader::credential: 更新cookie
+2025-05-15 18:12:53  INFO biliup::uploader: LoginInfo { cookie_info: Object {"cookies": Array [Object {"expires": Number(1755108773), "http_only": Number(1), "name": String("SESSDATA"), "same_site": Number(0), "secure": Number(0), "value": String("11e4039b%2C1762884773%2C9c33b251CjBymwpQ0D4APIuzJfqy2HcILJlnIgsiFqEI1uJLsrYjwOuTlfTOBpoTKVbsQ8NTyVkSVmpyN1RBS3hpX0tNUUs4OXo1bHl0X1R4NmFQaTV6bWF0WlYyaWd2RXlad0JMTjFYcEc5WmhFUmtMdVdyeHI2T1drQlVmVTdqcm1JYWE3SmxnMlpWaElBIIEC")}, Object {"expires": Number(1755108773), "http_only": Number(0), "name": String("bili_jct"), "same_site": Number(0), "secure": Number(0), "value": String("8742a7d8183abbbab51faa37b1cf1b74")}, Object {"expires": Number(1755108773), "http_only": Number(0), "name": String("DedeUserID"), "same_site": Number(0), "secure": Number(0), "value": String("1535934003")}, Object {"expires": Number(1755108773), "http_only": Number(0), "name": String("DedeUserID__ckMd5"), "same_site": Number(0), "secure": Number(0), "value": String("f899905049c379d5")}, Object {"expires": Number(1755108773), "http_only": Number(0), "name": String("sid"), "same_site": Number(0), "secure": Number(0), "value": String("glfgmk64")}, Object {"expires": Number(1755108773), "http_only": Number(1), "name": String("sec_ck"), "same_site": Number(0), "secure": Number(1), "value": String("aLzfDssxUfa9snuIN3Ht1CR5-w46lpVzdA0jb23C5c5B5m7ipoSBFd2a891MNMuvPuI7avbJkE6Z4_nUTgSWA0ln6DnLG9oRUiTCRgkaBMxXoAl_EWJtGtoSBaX7lQQ0Ll4UmF4Cg_KeNLgZVb1n0S8yJLkuAHunWAiVKjvZU_VXb6QnKhRIWg!Mss")}], "domains": Array [String(".bilibili.com"), String(".biligame.com"), String(".bilibili.cn"), String(".bilicomic.com"), String(".bilicomics.com")]}, sso: ["https://passport.bilibili.com/api/v2/sso", "https://passport.biligame.com/api/v2/sso", "https://passport.bilibili.cn/api/v2/sso"], token_info: TokenInfo { access_token: "102e16b89c75eaf49090f6fd01ecad51CjBymwpQ0D4APIuzJfqy2HcILJlnIgsiFqEI1uJLsrYjwOuTlfTOBpoTKVbsQ8NTyVkSVmpyN1RBS3hpX0tNUUs4OXo1bHl0X1R4NmFQaTV6bWF0WlYyaWd2RXlad0JMTjFYcEc5WmhFUmtMdVdyeHI2T1drQlVmVTdqcm1JYWE3SmxnMlpWaElBIIEC", expires_in: 15552000, mid: 1535934003, refresh_token: "b182a2e4d5578ecf9eb02bd82eb72651" }, platform: Some("BiliTV") }
+INFO:root:['yt-dlp', 'https://www.bilibili.com/video/BV1Wn55zKEmj', '-o', '/tmp/[%(uploader)s] %(title)s %(upload_date)s.34f33dba-f778-48ed-b6a9-77d971236941.%(ext)s', '--cookies', 'ytdlp_cookies.txt', '--external-downloader', 'aria2c', '--external-downloader-args', '-x 16 -s 16 -k 1M']
+WARNING: External Downloader arguments given without specifying name. The arguments will be given to aria2c
+INFO:root:[BiliBili] Extracting URL: https://www.bilibili.com/video/BV1Wn55zKEmj
+
+INFO:root:[BiliBili] 1Wn55zKEmj: Downloading webpage
+
+INFO:root:[BiliBili] BV1Wn55zKEmj: Extracting videos in anthology
+
+INFO:root:[BiliBili] 114476045045491: Extracting chapters
+
+INFO:root:[info] BV1Wn55zKEmj: Downloading 1 format(s): 30080+30280
+
+INFO:root:[download] Destination: /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月09日10点场 20250509.34f33dba-f778-48ed-b6a9-77d971236941.f30080.mp4
+
+INFO:root:[#80b873 20MiB/373MiB(5%) CN:16 DL:28MiB ETA:12s]
+
+INFO:root:[#80b873 107MiB/373MiB(28%) CN:16 DL:62MiB ETA:4s]
+
+INFO:root:[#80b873 178MiB/373MiB(47%) CN:16 DL:65MiB ETA:2s]
+
+INFO:root:[#80b873 251MiB/373MiB(67%) CN:16 DL:67MiB ETA:1s]
+
+INFO:root:[#80b873 322MiB/373MiB(86%) CN:16 DL:68MiB]
+
+INFO:root:
+
+INFO:root:[download] 100% of  373.90MiB in 00:00:06 at 61.74MiB/s
+
+INFO:root:[download] Destination: /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月09日10点场 20250509.34f33dba-f778-48ed-b6a9-77d971236941.f30280.m4a
+
+INFO:root:[#25f302 36MiB/202MiB(18%) CN:16 DL:49MiB ETA:3s]
+
+INFO:root:[#25f302 93MiB/202MiB(46%) CN:16 DL:54MiB ETA:2s]
+
+INFO:root:[#25f302 155MiB/202MiB(76%) CN:16 DL:56MiB]
+
+INFO:root:
+
+INFO:root:[download] 100% of  202.15MiB in 00:00:04 at 49.63MiB/s
+
+INFO:root:[Merger] Merging formats into "/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月09日10点场 20250509.34f33dba-f778-48ed-b6a9-77d971236941.mp4"
+
+INFO:root:Deleting original file /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月09日10点场 20250509.34f33dba-f778-48ed-b6a9-77d971236941.f30080.mp4 (pass -k to keep)
+
+INFO:root:Deleting original file /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月09日10点场 20250509.34f33dba-f778-48ed-b6a9-77d971236941.f30280.m4a (pass -k to keep)
+
+INFO:root:['mathcing', '/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月09日10点场 20250509.34f33dba-f778-48ed-b6a9-77d971236941.mp4']
+INFO:root:['calling', ['python', 'inaseg.py', '--media=/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月09日10点场 20250509..mp4', '--outdir=/inaseg', '--soundonly', '', '--shazam', '--cleanup'], 'in terminal:']
+ERROR:root:/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月09日10点场 20250509..mp4 failed. file is removed in                     automatic error ignore handler
+INFO:root:['calling biliupWrapper on', 'https://www.bilibili.com/video/BV1CUVRzLEe1', 'at', '2025-05-15 18:13:11']
+INFO:root:inaseging https://www.bilibili.com/video/BV1CUVRzLEe1 at 2025-05-15 18:13:11
+2025-05-15 18:13:11  INFO biliup::uploader::credential: 更新cookie
+2025-05-15 18:13:11  INFO biliup::uploader: LoginInfo { cookie_info: Object {"cookies": Array [Object {"expires": Number(1755108791), "http_only": Number(1), "name": String("SESSDATA"), "same_site": Number(0), "secure": Number(0), "value": String("17f7518a%2C1762884791%2C00631f51CjCb1IakB57EEMvZz5qIzYjPZuWdP4DBH8RO04HxEbunjuFTFLah_8p8UJzP6by0OAcSVkRIczJOeGR2bWRvbDVQNkFBZVZyRG5xRG9vYjdEQmp3b1ViOXo5OFpqc3FnVXRaa0ItVjdvM2ttamU0eGhVbUNqYXR5MUtySHlUS2pyTk9YUXY1Q2hBIIEC")}, Object {"expires": Number(1755108791), "http_only": Number(0), "name": String("bili_jct"), "same_site": Number(0), "secure": Number(0), "value": String("cbc84587b605264f8588deebc46c655d")}, Object {"expires": Number(1755108791), "http_only": Number(0), "name": String("DedeUserID"), "same_site": Number(0), "secure": Number(0), "value": String("1535934003")}, Object {"expires": Number(1755108791), "http_only": Number(0), "name": String("DedeUserID__ckMd5"), "same_site": Number(0), "secure": Number(0), "value": String("f899905049c379d5")}, Object {"expires": Number(1755108791), "http_only": Number(0), "name": String("sid"), "same_site": Number(0), "secure": Number(0), "value": String("f7jzahcm")}, Object {"expires": Number(1755108791), "http_only": Number(1), "name": String("sec_ck"), "same_site": Number(0), "secure": Number(1), "value": String("-g90OA2PBKQj_CIBCfUqRXjWrNZ1zaHQR9sT0Tsu1k1vkrM2Xwg6_LQdqkCuu-AqEnpcuAQQNoVCo7yyhMzDG4IQfHincHvmlIrIZB0yY_G75eM-awxfcJGOrjncDWHzi2SWofkce3Jhd0pUysxL_r41umu5Yhw-eyYb8TP8SC8cXe2CjrnddA!Mss")}], "domains": Array [String(".bilibili.com"), String(".biligame.com"), String(".bilibili.cn"), String(".bilicomic.com"), String(".bilicomics.com")]}, sso: ["https://passport.bilibili.com/api/v2/sso", "https://passport.biligame.com/api/v2/sso", "https://passport.bilibili.cn/api/v2/sso"], token_info: TokenInfo { access_token: "71a35b2b09e6e306b28dce490c05c151CjCb1IakB57EEMvZz5qIzYjPZuWdP4DBH8RO04HxEbunjuFTFLah_8p8UJzP6by0OAcSVkRIczJOeGR2bWRvbDVQNkFBZVZyRG5xRG9vYjdEQmp3b1ViOXo5OFpqc3FnVXRaa0ItVjdvM2ttamU0eGhVbUNqYXR5MUtySHlUS2pyTk9YUXY1Q2hBIIEC", expires_in: 15552000, mid: 1535934003, refresh_token: "a5b348cacfb9465c4128cad6d6040b51" }, platform: Some("BiliTV") }
+INFO:root:['yt-dlp', 'https://www.bilibili.com/video/BV1CUVRzLEe1', '-o', '/tmp/[%(uploader)s] %(title)s %(upload_date)s.ba0a5266-88ca-446f-bc2b-17e91b831cdf.%(ext)s', '--cookies', 'ytdlp_cookies.txt', '--external-downloader', 'aria2c', '--external-downloader-args', '-x 16 -s 16 -k 1M']
+WARNING: External Downloader arguments given without specifying name. The arguments will be given to aria2c
+INFO:root:[BiliBili] Extracting URL: https://www.bilibili.com/video/BV1CUVRzLEe1
+
+INFO:root:[BiliBili] 1CUVRzLEe1: Downloading webpage
+
+INFO:root:[BiliBili] BV1CUVRzLEe1: Extracting videos in anthology
+
+INFO:root:[BiliBili] 114481766139629: Extracting chapters
+
+INFO:root:[info] BV1CUVRzLEe1: Downloading 1 format(s): 30080+30280
+
+INFO:root:[download] Destination: /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月10日10点场 20250510.ba0a5266-88ca-446f-bc2b-17e91b831cdf.f30080.mp4
+
+INFO:root:[#f63006 43MiB/412MiB(10%) CN:16 DL:51MiB ETA:7s]
+
+INFO:root:[#f63006 100MiB/412MiB(24%) CN:16 DL:54MiB ETA:5s]
+
+INFO:root:[#f63006 160MiB/412MiB(38%) CN:16 DL:56MiB ETA:4s]
+
+INFO:root:[#f63006 221MiB/412MiB(53%) CN:16 DL:58MiB ETA:3s]
+
+INFO:root:[#f63006 281MiB/412MiB(68%) CN:16 DL:58MiB ETA:2s]
+
+INFO:root:[#f63006 342MiB/412MiB(83%) CN:16 DL:59MiB ETA:1s]
+
+INFO:root:[#f63006 402MiB/412MiB(97%) CN:16 DL:59MiB]
+
+INFO:root:
+
+INFO:root:[download] 100% of  412.48MiB in 00:00:07 at 55.26MiB/s
+
+INFO:root:[download] Destination: /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月10日10点场 20250510.ba0a5266-88ca-446f-bc2b-17e91b831cdf.f30280.m4a
+
+INFO:root:[#101f46 41MiB/211MiB(19%) CN:16 DL:49MiB ETA:3s]
+
+INFO:root:[#101f46 99MiB/211MiB(47%) CN:16 DL:54MiB ETA:2s]
+
+INFO:root:[#101f46 153MiB/211MiB(72%) CN:16 DL:54MiB ETA:1s]
+
+INFO:root:[#101f46 207MiB/211MiB(98%) CN:8 DL:54MiB]
+
+INFO:root:
+
+INFO:root:[download] 100% of  211.45MiB in 00:00:04 at 49.02MiB/s
+
+INFO:root:[Merger] Merging formats into "/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月10日10点场 20250510.ba0a5266-88ca-446f-bc2b-17e91b831cdf.mp4"
+
+INFO:root:Deleting original file /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月10日10点场 20250510.ba0a5266-88ca-446f-bc2b-17e91b831cdf.f30280.m4a (pass -k to keep)
+
+INFO:root:Deleting original file /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月10日10点场 20250510.ba0a5266-88ca-446f-bc2b-17e91b831cdf.f30080.mp4 (pass -k to keep)
+
+INFO:root:['mathcing', '/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月10日10点场 20250510.ba0a5266-88ca-446f-bc2b-17e91b831cdf.mp4']
+INFO:root:['calling', ['python', 'inaseg.py', '--media=/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月10日10点场 20250510..mp4', '--outdir=/inaseg', '--soundonly', '', '--shazam', '--cleanup'], 'in terminal:']
+ERROR:root:/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月10日10点场 20250510..mp4 failed. file is removed in                     automatic error ignore handler
+INFO:root:['calling biliupWrapper on', 'https://www.bilibili.com/video/BV1sJETztE9e', 'at', '2025-05-15 18:13:31']
+INFO:root:inaseging https://www.bilibili.com/video/BV1sJETztE9e at 2025-05-15 18:13:31
+2025-05-15 18:13:31  INFO biliup::uploader::credential: 更新cookie
+2025-05-15 18:13:31  INFO biliup::uploader: LoginInfo { cookie_info: Object {"cookies": Array [Object {"expires": Number(1755108811), "http_only": Number(1), "name": String("SESSDATA"), "same_site": Number(0), "secure": Number(0), "value": String("bd042f19%2C1762884811%2C3f520552CjBznQ3LNs9g5q4yOy0LQexe2-UE9ac5hHWoVNE9n70aqj8uk7IyGPUC-HU_toSx7WESVmQteWYtajM5aDRIaGpZc09DV1puYXp2azlGa1VzTWZvc0J3MDVaa1lBZDZWME1JdmpTNlJkcE00WE5qeU82Vk1ER2w3b293ZWxqY0QzNThMYXZrM1VnIIEC")}, Object {"expires": Number(1755108811), "http_only": Number(0), "name": String("bili_jct"), "same_site": Number(0), "secure": Number(0), "value": String("843a8cbb07d532c3642747c5ec23e706")}, Object {"expires": Number(1755108811), "http_only": Number(0), "name": String("DedeUserID"), "same_site": Number(0), "secure": Number(0), "value": String("1535934003")}, Object {"expires": Number(1755108811), "http_only": Number(0), "name": String("DedeUserID__ckMd5"), "same_site": Number(0), "secure": Number(0), "value": String("f899905049c379d5")}, Object {"expires": Number(1755108811), "http_only": Number(0), "name": String("sid"), "same_site": Number(0), "secure": Number(0), "value": String("pz2tio4h")}, Object {"expires": Number(1755108811), "http_only": Number(1), "name": String("sec_ck"), "same_site": Number(0), "secure": Number(1), "value": String("YzY0kZ2WsfjUdN6KZm3_a7Jjvzm3eH7sJXHzeSeZfMZ91BGSwzgHjtVNUbVmHYqEvbLqwybpN2gbG0_CIxTitcOVMMTquzjW2gVWSQx73wrR7GMjkCpz-R40vLxREWyofT0li8zrHuP8ZOCRRWmWTmKGXM51Q3qnOb1BMHi2S0xi5vURFT1Bog!Mss")}], "domains": Array [String(".bilibili.com"), String(".biligame.com"), String(".bilibili.cn"), String(".bilicomic.com"), String(".bilicomics.com")]}, sso: ["https://passport.bilibili.com/api/v2/sso", "https://passport.biligame.com/api/v2/sso", "https://passport.bilibili.cn/api/v2/sso"], token_info: TokenInfo { access_token: "c9a7347c377d1d32b2d6653cb039a252CjBznQ3LNs9g5q4yOy0LQexe2-UE9ac5hHWoVNE9n70aqj8uk7IyGPUC-HU_toSx7WESVmQteWYtajM5aDRIaGpZc09DV1puYXp2azlGa1VzTWZvc0J3MDVaa1lBZDZWME1JdmpTNlJkcE00WE5qeU82Vk1ER2w3b293ZWxqY0QzNThMYXZrM1VnIIEC", expires_in: 15552000, mid: 1535934003, refresh_token: "e3110edf66f7eeaaf6305bcb1138c652" }, platform: Some("BiliTV") }
+INFO:root:['yt-dlp', 'https://www.bilibili.com/video/BV1sJETztE9e', '-o', '/tmp/[%(uploader)s] %(title)s %(upload_date)s.cac92b7a-a80b-4b75-9970-99775c265c8f.%(ext)s', '--cookies', 'ytdlp_cookies.txt', '--external-downloader', 'aria2c', '--external-downloader-args', '-x 16 -s 16 -k 1M']
+WARNING: External Downloader arguments given without specifying name. The arguments will be given to aria2c
+INFO:root:[BiliBili] Extracting URL: https://www.bilibili.com/video/BV1sJETztE9e
+
+INFO:root:[BiliBili] 1sJETztE9e: Downloading webpage
+
+INFO:root:[BiliBili] BV1sJETztE9e: Extracting videos in anthology
+
+INFO:root:[BiliBili] 114487352886858: Extracting chapters
+
+INFO:root:[info] BV1sJETztE9e: Downloading 1 format(s): 30080+30280
+
+INFO:root:[download] Destination: /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月11日10点场 20250511.cac92b7a-a80b-4b75-9970-99775c265c8f.f30080.mp4
+
+INFO:root:[#08e765 19MiB/412MiB(4%) CN:16 DL:28MiB ETA:13s]
+
+INFO:root:[#08e765 91MiB/412MiB(22%) CN:16 DL:54MiB ETA:5s]
+
+INFO:root:[#08e765 163MiB/412MiB(39%) CN:16 DL:60MiB ETA:4s]
+
+INFO:root:[#08e765 231MiB/412MiB(56%) CN:16 DL:63MiB ETA:2s]
+
+INFO:root:[#08e765 304MiB/412MiB(73%) CN:16 DL:65MiB ETA:1s]
+
+INFO:root:[#08e765 373MiB/412MiB(90%) CN:16 DL:65MiB]
+
+INFO:root:
+
+INFO:root:[download] 100% of  412.53MiB in 00:00:06 at 59.47MiB/s
+
+INFO:root:[download] Destination: /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月11日10点场 20250511.cac92b7a-a80b-4b75-9970-99775c265c8f.f30280.m4a
+
+INFO:root:[#c90a2c 29MiB/209MiB(14%) CN:16 DL:36MiB ETA:4s]
+
+INFO:root:[#c90a2c 99MiB/209MiB(47%) CN:16 DL:55MiB ETA:1s]
+
+INFO:root:[#c90a2c 162MiB/209MiB(77%) CN:16 DL:58MiB]
+
+INFO:root:
+
+INFO:root:[download] 100% of  209.33MiB in 00:00:04 at 50.50MiB/s
+
+INFO:root:[Merger] Merging formats into "/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月11日10点场 20250511.cac92b7a-a80b-4b75-9970-99775c265c8f.mp4"
+
+INFO:root:Deleting original file /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月11日10点场 20250511.cac92b7a-a80b-4b75-9970-99775c265c8f.f30080.mp4 (pass -k to keep)
+
+INFO:root:Deleting original file /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月11日10点场 20250511.cac92b7a-a80b-4b75-9970-99775c265c8f.f30280.m4a (pass -k to keep)
+
+INFO:root:['mathcing', '/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月11日10点场 20250511.cac92b7a-a80b-4b75-9970-99775c265c8f.mp4']
+INFO:root:['calling', ['python', 'inaseg.py', '--media=/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月11日10点场 20250511..mp4', '--outdir=/inaseg', '--soundonly', '', '--shazam', '--cleanup'], 'in terminal:']
+ERROR:root:/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月11日10点场 20250511..mp4 failed. file is removed in                     automatic error ignore handler
+INFO:root:['calling biliupWrapper on', 'https://www.bilibili.com/video/BV1yRE5z2ENa', 'at', '2025-05-15 18:13:50']
+INFO:root:inaseging https://www.bilibili.com/video/BV1yRE5z2ENa at 2025-05-15 18:13:50
+2025-05-15 18:13:50  INFO biliup::uploader::credential: 更新cookie
+2025-05-15 18:13:50  INFO biliup::uploader: LoginInfo { cookie_info: Object {"cookies": Array [Object {"expires": Number(1755108830), "http_only": Number(1), "name": String("SESSDATA"), "same_site": Number(0), "secure": Number(0), "value": String("3c31308f%2C1762884830%2C42e7da52CjDENQhwgcX0q5hOuusZRARHmJTZzZGxx0UjoRhT9Yz9SMySWYgCIjSzHqGKYg-_rIMSVmtkMm1hLXJwWHdaYm5SU1hMck5ZdmR0TDlETi1ZLXdYcFdTeEV2RjR1UnQ1Q3BIeklReWVoU243SmVESjRITU9ZNzFxVm1MaE00TE5YS2Fjb0lrS3RBIIEC")}, Object {"expires": Number(1755108830), "http_only": Number(0), "name": String("bili_jct"), "same_site": Number(0), "secure": Number(0), "value": String("a21fc71db0147a29d2d3a17532a85e3c")}, Object {"expires": Number(1755108830), "http_only": Number(0), "name": String("DedeUserID"), "same_site": Number(0), "secure": Number(0), "value": String("1535934003")}, Object {"expires": Number(1755108830), "http_only": Number(0), "name": String("DedeUserID__ckMd5"), "same_site": Number(0), "secure": Number(0), "value": String("f899905049c379d5")}, Object {"expires": Number(1755108830), "http_only": Number(0), "name": String("sid"), "same_site": Number(0), "secure": Number(0), "value": String("dp4dpzm7")}, Object {"expires": Number(1755108830), "http_only": Number(1), "name": String("sec_ck"), "same_site": Number(0), "secure": Number(1), "value": String("E3mDyOfBdLu_hc6vHyx8dtArwsEVNYF4IX7t90puaqRo6gqZOBrOLi7i2_gua9DT9Ni1Y7HOl7zVjG5l-kr-XJddX1nKpn20D8-zO4AMfrNN5salFprb8zenStoq1QETuFyo0bdKy9eKD8Rxlfu2vWBf7QfZe0ajF8HwlMFwhqIbY2jdQccPkw!Mss")}], "domains": Array [String(".bilibili.com"), String(".biligame.com"), String(".bilibili.cn"), String(".bilicomic.com"), String(".bilicomics.com")]}, sso: ["https://passport.bilibili.com/api/v2/sso", "https://passport.biligame.com/api/v2/sso", "https://passport.bilibili.cn/api/v2/sso"], token_info: TokenInfo { access_token: "220e45450da5012a7950ed8c2232f052CjDENQhwgcX0q5hOuusZRARHmJTZzZGxx0UjoRhT9Yz9SMySWYgCIjSzHqGKYg-_rIMSVmtkMm1hLXJwWHdaYm5SU1hMck5ZdmR0TDlETi1ZLXdYcFdTeEV2RjR1UnQ1Q3BIeklReWVoU243SmVESjRITU9ZNzFxVm1MaE00TE5YS2Fjb0lrS3RBIIEC", expires_in: 15552000, mid: 1535934003, refresh_token: "44fc826a10e150e466c67914482de452" }, platform: Some("BiliTV") }
+INFO:root:['yt-dlp', 'https://www.bilibili.com/video/BV1yRE5z2ENa', '-o', '/tmp/[%(uploader)s] %(title)s %(upload_date)s.9cae03d7-e756-4b18-93a0-8af0c63b334e.%(ext)s', '--cookies', 'ytdlp_cookies.txt', '--external-downloader', 'aria2c', '--external-downloader-args', '-x 16 -s 16 -k 1M']
+WARNING: External Downloader arguments given without specifying name. The arguments will be given to aria2c
+INFO:root:[BiliBili] Extracting URL: https://www.bilibili.com/video/BV1yRE5z2ENa
+
+INFO:root:[BiliBili] 1yRE5z2ENa: Downloading webpage
+
+INFO:root:[BiliBili] BV1yRE5z2ENa: Extracting videos in anthology
+
+INFO:root:[BiliBili] 114493040365374: Extracting chapters
+
+INFO:root:[info] BV1yRE5z2ENa: Downloading 1 format(s): 30080+30280
+
+INFO:root:[download] Destination: /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月12日10点场 20250512.9cae03d7-e756-4b18-93a0-8af0c63b334e.f30080.mp4
+
+INFO:root:[#427d90 36MiB/423MiB(8%) CN:16 DL:49MiB ETA:7s]
+
+INFO:root:[#427d90 100MiB/423MiB(23%) CN:16 DL:57MiB ETA:5s]
+
+INFO:root:[#427d90 155MiB/423MiB(36%) CN:16 DL:57MiB ETA:4s]
+
+INFO:root:[#427d90 217MiB/423MiB(51%) CN:16 DL:58MiB ETA:3s]
+
+INFO:root:[#427d90 279MiB/423MiB(66%) CN:16 DL:59MiB ETA:2s]
+
+INFO:root:[#427d90 337MiB/423MiB(79%) CN:16 DL:59MiB ETA:1s]
+
+INFO:root:[#427d90 398MiB/423MiB(93%) CN:16 DL:59MiB]
+
+INFO:root:
+
+INFO:root:[download] 100% of  423.47MiB in 00:00:07 at 55.82MiB/s
+
+INFO:root:[download] Destination: /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月12日10点场 20250512.9cae03d7-e756-4b18-93a0-8af0c63b334e.f30280.m4a
+
+INFO:root:[#1906e8 14MiB/217MiB(6%) CN:16 DL:25MiB ETA:7s]
+
+INFO:root:[#1906e8 74MiB/217MiB(34%) CN:16 DL:47MiB ETA:3s]
+
+INFO:root:[#1906e8 127MiB/217MiB(58%) CN:16 DL:49MiB ETA:1s]
+
+INFO:root:[#1906e8 207MiB/217MiB(95%) CN:15 DL:58MiB]
+
+INFO:root:
+
+INFO:root:[download] 100% of  217.37MiB in 00:00:04 at 49.19MiB/s
+
+INFO:root:[Merger] Merging formats into "/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月12日10点场 20250512.9cae03d7-e756-4b18-93a0-8af0c63b334e.mp4"
+
+INFO:root:Deleting original file /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月12日10点场 20250512.9cae03d7-e756-4b18-93a0-8af0c63b334e.f30280.m4a (pass -k to keep)
+
+INFO:root:Deleting original file /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月12日10点场 20250512.9cae03d7-e756-4b18-93a0-8af0c63b334e.f30080.mp4 (pass -k to keep)
+
+INFO:root:['mathcing', '/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月12日10点场 20250512.9cae03d7-e756-4b18-93a0-8af0c63b334e.mp4']
+INFO:root:['calling', ['python', 'inaseg.py', '--media=/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月12日10点场 20250512..mp4', '--outdir=/inaseg', '--soundonly', '', '--shazam', '--cleanup'], 'in terminal:']
+ERROR:root:/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月12日10点场 20250512..mp4 failed. file is removed in                     automatic error ignore handler
+INFO:root:['calling biliupWrapper on', 'https://www.bilibili.com/video/BV1AU7fziEkM', 'at', '2025-05-15 18:14:10']
+INFO:root:inaseging https://www.bilibili.com/video/BV1AU7fziEkM at 2025-05-15 18:14:10
+2025-05-15 18:14:10  INFO biliup::uploader::credential: 更新cookie
+2025-05-15 18:14:10  INFO biliup::uploader: LoginInfo { cookie_info: Object {"cookies": Array [Object {"expires": Number(1755108850), "http_only": Number(1), "name": String("SESSDATA"), "same_site": Number(0), "secure": Number(0), "value": String("acf74b47%2C1762884850%2C90408e52CjAdo-gu0m5vmtcnsT5uCfcvsL6E0oU0divpyPuaZxxNLgGyLKbMtix_d6Lr2rm-l0ISVlVqWGR0YzgyTFZUWk54NUdpUWdkc0NCcG41Wk14eVhxX3hqWDU1SGtCcEFEOGotbG5UTk5ZNmhCdy1EVFdmeVNiSDRic1ByMWpWOU02QkZLN3U0Z1dnIIEC")}, Object {"expires": Number(1755108850), "http_only": Number(0), "name": String("bili_jct"), "same_site": Number(0), "secure": Number(0), "value": String("7eef9a7126c70cef7cc098ce8ddc9f26")}, Object {"expires": Number(1755108850), "http_only": Number(0), "name": String("DedeUserID"), "same_site": Number(0), "secure": Number(0), "value": String("1535934003")}, Object {"expires": Number(1755108850), "http_only": Number(0), "name": String("DedeUserID__ckMd5"), "same_site": Number(0), "secure": Number(0), "value": String("f899905049c379d5")}, Object {"expires": Number(1755108850), "http_only": Number(0), "name": String("sid"), "same_site": Number(0), "secure": Number(0), "value": String("6fepbgj6")}, Object {"expires": Number(1755108850), "http_only": Number(1), "name": String("sec_ck"), "same_site": Number(0), "secure": Number(1), "value": String("J-TNA3ck0iNNGmNLuwRy-mPptOQrqpKT-DZ-sf1pi7vHtOlM3XfOrkJsj0lSiXI2rwoZAJah9OotbSC4LgM4fEKJMPSw_zwRkwL1L2aer-unqqEBnlkK6s3f2vjoLdwbEqzdmz4rb45GqGwMzmIr5A3EUcAcsU1dUgJ5S8oBtP9m60II-bYYKw!Mss")}], "domains": Array [String(".bilibili.com"), String(".biligame.com"), String(".bilibili.cn"), String(".bilicomic.com"), String(".bilicomics.com")]}, sso: ["https://passport.bilibili.com/api/v2/sso", "https://passport.biligame.com/api/v2/sso", "https://passport.bilibili.cn/api/v2/sso"], token_info: TokenInfo { access_token: "adfd41d702aac39a32898ad5b6323052CjAdo-gu0m5vmtcnsT5uCfcvsL6E0oU0divpyPuaZxxNLgGyLKbMtix_d6Lr2rm-l0ISVlVqWGR0YzgyTFZUWk54NUdpUWdkc0NCcG41Wk14eVhxX3hqWDU1SGtCcEFEOGotbG5UTk5ZNmhCdy1EVFdmeVNiSDRic1ByMWpWOU02QkZLN3U0Z1dnIIEC", expires_in: 15552000, mid: 1535934003, refresh_token: "48ec41bfea9eb9812457a89212fe3a52" }, platform: Some("BiliTV") }
+INFO:root:['yt-dlp', 'https://www.bilibili.com/video/BV1AU7fziEkM', '-o', '/tmp/[%(uploader)s] %(title)s %(upload_date)s.d598de42-f359-46e4-8c38-439ff4b88fd5.%(ext)s', '--cookies', 'ytdlp_cookies.txt', '--external-downloader', 'aria2c', '--external-downloader-args', '-x 16 -s 16 -k 1M']
+WARNING: External Downloader arguments given without specifying name. The arguments will be given to aria2c
+INFO:root:[BiliBili] Extracting URL: https://www.bilibili.com/video/BV1AU7fziEkM
+
+INFO:root:[BiliBili] 1AU7fziEkM: Downloading webpage
+
+INFO:root:[BiliBili] BV1AU7fziEkM: Extracting videos in anthology
+
+INFO:root:[BiliBili] 114498660731613: Extracting chapters
+
+INFO:root:[info] BV1AU7fziEkM: Downloading 1 format(s): 30080+30280
+
+INFO:root:[download] Destination: /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月13日10点场 20250513.d598de42-f359-46e4-8c38-439ff4b88fd5.f30080.mp4
+
+INFO:root:[#6eda1e 46MiB/413MiB(11%) CN:16 DL:52MiB ETA:7s]
+
+INFO:root:[#6eda1e 110MiB/413MiB(26%) CN:16 DL:58MiB ETA:5s]
+
+INFO:root:[#6eda1e 177MiB/413MiB(43%) CN:16 DL:62MiB ETA:3s]
+
+INFO:root:[#6eda1e 240MiB/413MiB(58%) CN:16 DL:62MiB ETA:2s]
+
+INFO:root:[#6eda1e 304MiB/413MiB(73%) CN:16 DL:62MiB ETA:1s]
+
+INFO:root:[#6eda1e 365MiB/413MiB(88%) CN:16 DL:62MiB]
+
+INFO:root:
+
+INFO:root:[download] 100% of  413.58MiB in 00:00:06 at 59.15MiB/s
+
+INFO:root:[download] Destination: /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月13日10点场 20250513.d598de42-f359-46e4-8c38-439ff4b88fd5.f30280.m4a
+
+INFO:root:[#254ecd 22MiB/204MiB(11%) CN:16 DL:32MiB ETA:5s]
+
+INFO:root:[#254ecd 93MiB/204MiB(45%) CN:16 DL:54MiB ETA:2s]
+
+INFO:root:[#254ecd 161MiB/204MiB(79%) CN:16 DL:60MiB]
+
+INFO:root:
+
+INFO:root:[download] 100% of  204.03MiB in 00:00:03 at 51.25MiB/s
+
+INFO:root:[Merger] Merging formats into "/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月13日10点场 20250513.d598de42-f359-46e4-8c38-439ff4b88fd5.mp4"
+
+INFO:root:Deleting original file /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月13日10点场 20250513.d598de42-f359-46e4-8c38-439ff4b88fd5.f30080.mp4 (pass -k to keep)
+
+INFO:root:Deleting original file /tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月13日10点场 20250513.d598de42-f359-46e4-8c38-439ff4b88fd5.f30280.m4a (pass -k to keep)
+
+INFO:root:['mathcing', '/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月13日10点场 20250513.d598de42-f359-46e4-8c38-439ff4b88fd5.mp4']
+INFO:root:['calling', ['python', 'inaseg.py', '--media=/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月13日10点场 20250513..mp4', '--outdir=/inaseg', '--soundonly', '', '--shazam', '--cleanup'], 'in terminal:']
+ERROR:root:/tmp/[Puff_泡芙_] 【直播回放】佛系主播 埋头唱歌！ 2025年05月13日10点场 20250513..mp4 failed. file is removed in                     automatic error ignore handler
+INFO:root:['biliWatcher loop has completed on ', '2025-05-15 18:14:29']
+DEBUG:root:['biliWatcher loop is now waiting for ', 12800]
+
