@@ -1,0 +1,8 @@
+- extractor: biliuserupload
+  filter: no-song-cut
+  last_url: https://www.bilibili.com/video/BV1TiLHzAEqa
+  url: https://space.bilibili.com/1535934003/upload/video
+- extractor: biliseries.new
+  filter: no-song-cut
+  last_url: https://www.bilibili.com/video/BV1gMEDzREPW
+  url: https://space.bilibili.com/1351761831/lists/495256?type=series

@@ -1,0 +1,73 @@
+{
+  "cookie_info": {
+    "cookies": [
+      {
+        "expires": 1755679689,
+        "http_only": 1,
+        "name": "SESSDATA",
+        "same_site": 0,
+        "secure": 0,
+        "value": "1b1942e8%2C1763455689%2C3f78b752CjDGkXkuhyhsu6PHqRtqPSdMvWMxUt1vBjKG98gsTNd6jnSYhVbyju9gJ5O5BKn9PB4SVmkzWlFFTmRPSG1VYXlENDU2Vlg1T1V1a2Fxd3ZYT0cyQnMtYjVKbGpRdXU1UGxJWnJ4T1JnYkZYZlN5V3RUUGtDazhLczEtSXNpenJtU2IxZ2t1RUFBIIEC"
+      },
+      {
+        "expires": 1755679689,
+        "http_only": 0,
+        "name": "bili_jct",
+        "same_site": 0,
+        "secure": 0,
+        "value": "aa36d7b44f3f5e8ed3e4ccb178e5a1de"
+      },
+      {
+        "expires": 1755679689,
+        "http_only": 0,
+        "name": "DedeUserID",
+        "same_site": 0,
+        "secure": 0,
+        "value": "1535934003"
+      },
+      {
+        "expires": 1755679689,
+        "http_only": 0,
+        "name": "DedeUserID__ckMd5",
+        "same_site": 0,
+        "secure": 0,
+        "value": "f899905049c379d5"
+      },
+      {
+        "expires": 1755679689,
+        "http_only": 0,
+        "name": "sid",
+        "same_site": 0,
+        "secure": 0,
+        "value": "mdzbhi6e"
+      },
+      {
+        "expires": 1755679689,
+        "http_only": 1,
+        "name": "sec_ck",
+        "same_site": 0,
+        "secure": 1,
+        "value": "mkVh9SsfHVpse5zX95OQcOYN9NnfWiMlCxBwJSoeKn5tkn5O8NLhpsAUvAx9aujTDwZO3Eh0xQTP-IKYNs6TmVH9vqYamoGCdeknv702L1Wufx5sNOeLhTqNpp3ubiLtAUa5YTlFTxN9kiYhLKK0ogJaTgBm0mesXCtQyfLuYL6E0XNcRRH6z-Luag!Mss"
+      }
+    ],
+    "domains": [
+      ".bilibili.com",
+      ".biligame.com",
+      ".bilibili.cn",
+      ".bilicomic.com",
+      ".bilicomics.com"
+    ]
+  },
+  "sso": [
+    "https://passport.bilibili.com/api/v2/sso",
+    "https://passport.biligame.com/api/v2/sso",
+    "https://passport.bilibili.cn/api/v2/sso"
+  ],
+  "token_info": {
+    "access_token": "8fe64d42c550031a3b016e83e2133552CjDGkXkuhyhsu6PHqRtqPSdMvWMxUt1vBjKG98gsTNd6jnSYhVbyju9gJ5O5BKn9PB4SVmkzWlFFTmRPSG1VYXlENDU2Vlg1T1V1a2Fxd3ZYT0cyQnMtYjVKbGpRdXU1UGxJWnJ4T1JnYkZYZlN5V3RUUGtDazhLczEtSXNpenJtU2IxZ2t1RUFBIIEC",
+    "expires_in": 15552000,
+    "mid": 1535934003,
+    "refresh_token": "1a0633a4c60413ce47e57b8e7db21d52"
+  },
+  "platform": "BiliTV"
+}

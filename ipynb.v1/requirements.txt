@@ -1,0 +1,10 @@
+yt-dlp
+shazamio
+pyyaml
+filelock
+jupyter
+regex
+requests
+celery
+sqlalchemy==1.4.46
+scikit-image
